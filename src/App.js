@@ -4,6 +4,7 @@ import Introduction from "./components/Introduction";
 import WithSubnavigation from "./components/Navbar";
 import ResearchInterests from "./components/ResearchInterests";
 import Landing from "./components/Landing/Landing";
+import PublicationOverview from "./components/PublicationOverview";
 
 function App() {
   return (
@@ -14,9 +15,10 @@ function App() {
         <Introduction />
         <Divider borderColor={"blackAlpha.700"} border={1} background={"black"}></Divider>
         <ResearchInterests/>
-        {/*<Landing />*/}
+        <Divider borderColor={"blackAlpha.700"} border={1} background={"black"}></Divider>
+        <PublicationOverview />
       </VStack>
-
+      {/* <Landing /> */}
     </>
   );
 }

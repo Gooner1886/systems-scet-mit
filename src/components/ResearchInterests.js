@@ -1,4 +1,4 @@
-import { Heading, Stack, Text } from "@chakra-ui/react";
+import { Heading, Stack, Text, Button } from "@chakra-ui/react";
 import React from "react";
 
 function ResearchInterests() {
@@ -16,12 +16,13 @@ function ResearchInterests() {
     >
       <Heading
         fontFamily={("Zilla Slab", "Poppins")}
-        bgGradient="linear(to-r, teal.300, teal.500)"
+        fontSize={["2xl", "4xl", "5xl"]}
+        bgGradient="linear(to-r, gray.500, gray.700)"
         bgClip={"text"}
       >
         Research Interests
       </Heading>
-      <Stack direction={"column"} p={4} flex={0.35}>
+      <Stack direction={"column"} p={4} flex={0.45}>
         <Text
           noOfLines={[15, 11, 11]}
           fontFamily={("Zilla Slab", "Poppins")}
@@ -46,6 +47,10 @@ function ResearchInterests() {
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat.
         </Text>
+        <br />
+        <Button colorScheme="orange" variant="outline" fontFamily={"Zilla Slab", "Poppins"} fontWeight={300}>
+          Research Accolades
+        </Button>
       </Stack>
     </Stack>
   );

@@ -9,6 +9,7 @@ function Introduction() {
         boxSize={["150px", "300px", "400px"]}
         src="https://bit.ly/dan-abramov"
         alt="Dan Abramov"
+        boxShadow={2}
       />
       <Stack direction={"column"} p={4} flex={0.4}>
         <Text noOfLines={[15, 11, 11]} fontFamily={"Zilla Slab", "Poppins"} fontWeight={300}>
