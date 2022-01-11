@@ -18,7 +18,7 @@ function App() {
         <Divider borderColor={"blackAlpha.700"} border={1} background={"black"}></Divider>
         <PublicationOverview />
       </VStack>
-      {/* <Landing /> */}
+      {/* <Landing test/> */}
     </>
   );
 }
