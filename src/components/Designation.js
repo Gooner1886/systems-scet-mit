@@ -14,8 +14,8 @@ function Designation() {
       justifyContent={"flex-end"}
     >
       <VStack spacing={4} p={4} mr={16} mb={12} mt={12} ml={10} alignItems={"flex-start"}>
-        <Heading fontFamily={"Zilla Slab", "Poppins"}>Dan Abramov, PHD</Heading>
-        <Text fontFamily={"Zilla Slab", "Poppins"} fontWeight={300}>Professor of CSE</Text>
+        <Heading fontFamily={"Zilla Slab, Poppins"}>Dan Abramov, PHD</Heading>
+        <Text fontFamily={"Zilla Slab, Poppins"} fontWeight={300}>Professor of CSE</Text>
       </VStack>
     </Box>
   );
