@@ -123,13 +123,13 @@ const DesktopNav = () => {
                 href={navItem.href ?? "#"}
                 fontSize={"md"}
                 fontWeight={375}
-                fontFamily={"Zilla Slab", "Poppins"}
+                fontFamily={"Zilla Slab, Poppins"}
                 color={linkColor}
                 _hover={{
                   textDecoration: "none",
                   color: linkHoverColor,
                 }}
-                
+
               >
                 {navItem.label}
               </Link>

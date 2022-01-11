@@ -11,7 +11,7 @@ function Introduction() {
         alt="Dan Abramov"
       />
       <Stack direction={"column"} p={4} flex={0.4}>
-        <Text noOfLines={10} fontFamily={"Zilla Slab", "Poppins"} fontWeight={300}>
+        <Text noOfLines={10} fontFamily={"Zilla Slab, Poppins"} fontWeight={300}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -21,11 +21,11 @@ function Introduction() {
           culpa qui officia deserunt mollit anim id est laborum.
         </Text>
         <br/>
-        <Text noOfLines={5} fontFamily={"Zilla Slab", "Poppins"} fontWeight={300}>
+        <Text noOfLines={5} fontFamily={"Zilla Slab, Poppins"} fontWeight={300}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. 
+          aliquip ex ea commodo consequat.
         </Text>
       </Stack>
     </Stack>
