@@ -5,9 +5,9 @@ import LoginPage from "./components/LoginPage/LoginPage"
 function App() {
   return (
     <>
-      <AboutPage/>
+      {/*<AboutPage/>*/}
       {/*<Landing/>*/}
-      {/*<LoginPage/>*/}
+      <LoginPage/>
     </>
   );
 }

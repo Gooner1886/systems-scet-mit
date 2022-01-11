@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import "./About.css";
 import Dummy from "./1.png";
-import WithSubnavigation from "../Navbar/Navbar"
+import WithSubnavigation from "../AboutPage/Navbar"
 import {Box} from "@chakra-ui/react"
 
 const Landing = () => {
@@ -70,7 +70,7 @@ const Landing = () => {
           alt="placeholder"
         />
       </Parent>
-      <Box w='100%' p={4} color='white' overflowX='hidden' textAlign='center' bgColor='rgba(66, 153, 225, 0.6)'>
+      <Box w='100%' p={4}  color='white' overflowX='hidden' textAlign='center' bgColor='rgba(66, 153, 225, 0.6)'>
             System-SCET@MITWPU
       </Box>
     </>
