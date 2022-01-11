@@ -279,7 +279,7 @@ const NAV_ITEMS = [
     href: "#",
   },
   {
-    label: "Inspiration",
+    label: "Teaching & Learning ",
     children: [
       {
         label: "Explore Design Work",
@@ -294,7 +294,7 @@ const NAV_ITEMS = [
     ],
   },
   {
-    label: "Find Work",
+    label: "Research & Innovation",
     children: [
       {
         label: "Job Board",
