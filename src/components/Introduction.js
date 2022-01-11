@@ -3,10 +3,10 @@ import React from "react";
 
 function Introduction() {
   return (
-    <Stack direction={"row"} width={"100%"} pl={12} pr={12} pb={12} pt={4} justifyContent={"space-evenly"}>
+    <Stack direction={["column", "column", "row"]} width={"100%"} pl={12} pr={12} pb={12} pt={4} justifyContent={"space-evenly"}>
       <Image
         borderRadius="full"
-        boxSize="400px"
+        boxSize={["150px", "300px", "400px"]}
         src="https://bit.ly/dan-abramov"
         alt="Dan Abramov"
       />
