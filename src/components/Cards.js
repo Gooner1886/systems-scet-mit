@@ -1,9 +1,11 @@
 import React from "react";
 import { Badge, Box,Image,Stack,Text,Button, transition, styled} from "@chakra-ui/react";
+import WithSubnavigation from './Navbar/Navbar'
 
-const card = (props)=>{
+const Cards = (props)=>{
 
-    return(
+    return(<>
+        <WithSubnavigation/>
         <Stack direction={['column', 'row']} spacing='100px'
             padding={"80px"}
             marginLeft={"150px"}
@@ -201,7 +203,11 @@ const card = (props)=>{
             </Button>
         </Box>
         </Stack>
+        <Box w='100%' p={4} position='fixed' bottom='0' color='white' overflowX='hidden' textAlign='center' bgColor='rgba(66, 153, 225, 0.6)'>
+            System-SCET@MITWPU
+        </Box>
+        </>
     );
 }
 
-export default card;
+export default Cards;
