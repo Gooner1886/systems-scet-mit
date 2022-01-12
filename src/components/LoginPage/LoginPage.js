@@ -4,6 +4,7 @@ import {LockIcon} from "@chakra-ui/icons"
 import { useEffect, useState } from "react"
 import {useLoginInterface,CheckSignIn} from "../Hooks.js"
 import { useNavigate } from "react-router-dom"
+import LandingNavbar from "../Landing/LandingNavbar";
 
 
 function LoginPage()
@@ -30,7 +31,7 @@ function LoginPage()
     }
 
     return <div style={backgroundStyle}>
-    <WithSubnavigation/>
+    <LandingNavbar />
 
     {isLoggedIn?navigate("/about"):undefined}
 

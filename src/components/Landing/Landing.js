@@ -3,11 +3,12 @@ import "./About.css";
 import Dummy from "./1.png";
 import WithSubnavigation from "../Navbar/Navbar"
 import {Box} from "@chakra-ui/react"
+import LandingNavbar from "./LandingNavbar";
 
 const Landing = () => {
   return (
     <>
-      <WithSubnavigation />
+      <LandingNavbar />
       <Parent>
         <HeaderCard>
           <h1 style={{ margin: 0 }}>MIT-WPU</h1>
