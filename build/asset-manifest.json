@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/systems-scet-mit-1/static/css/main.cda4f5e9.css",
+    "main.js": "/systems-scet-mit-1/static/js/main.326d40a6.js",
+    "static/media/1.png": "/systems-scet-mit-1/static/media/1.384831f0d67fc9975c67.png",
+    "index.html": "/systems-scet-mit-1/index.html",
+    "main.cda4f5e9.css.map": "/systems-scet-mit-1/static/css/main.cda4f5e9.css.map",
+    "main.326d40a6.js.map": "/systems-scet-mit-1/static/js/main.326d40a6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cda4f5e9.css",
+    "static/js/main.326d40a6.js"
+  ]
+}
