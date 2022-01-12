@@ -22,7 +22,7 @@ import {
   ChevronRightIcon,
 } from "@chakra-ui/icons";
 
-import {Link as ReactLink} from "react-router-dom";
+import { Link as ReactLink } from "react-router-dom";
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
@@ -55,16 +55,22 @@ export default function WithSubnavigation() {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
-          <Text
-            textAlign={useBreakpointValue({ base: "center", md: "left" })}
-            fontFamily={("Zilla Slab", "Poppins")}
-            color={useColorModeValue("gray.800", "white")}
-            fontSize={"xl"}
-          >
-            Logo
-          </Text>
+          <a href="/about">
+            <Text
+              textAlign={useBreakpointValue({ base: "center", md: "left" })}
+              fontFamily={("Zilla Slab", "Poppins")}
+              color={useColorModeValue("gray.800", "white")}
+              fontSize={"xl"}
+            >
+              Logo
+            </Text>
+          </a>
 
-          <Flex display={{ base: "none", md: "flex" }} ml={10} alignItems={"center"}>
+          <Flex
+            display={{ base: "none", md: "flex" }}
+            ml={10}
+            alignItems={"center"}
+          >
             <DesktopNav />
           </Flex>
         </Flex>
@@ -86,19 +92,19 @@ export default function WithSubnavigation() {
             Sign In
           </Button> */}
           <ReactLink to="/login">
-          <Button
-            display={{ base: "none", md: "inline-flex" }}
-            fontSize={"sm"}
-            fontWeight={400}
-            fontFamily={("Zilla Slab", "Poppins")}
-            color={"white"}
-            bg={"pink.400"}
-            _hover={{
-              bg: "pink.300",
-            }}
-          >
-            Log In
-          </Button>
+            <Button
+              display={{ base: "none", md: "inline-flex" }}
+              fontSize={"sm"}
+              fontWeight={400}
+              fontFamily={("Zilla Slab", "Poppins")}
+              color={"white"}
+              bg={"pink.400"}
+              _hover={{
+                bg: "pink.300",
+              }}
+            >
+              Log In
+            </Button>
           </ReactLink>
         </Stack>
       </Flex>
@@ -126,13 +132,12 @@ const DesktopNav = () => {
                 href={navItem.href ?? "#"}
                 fontSize={"md"}
                 fontWeight={375}
-                fontFamily={"Zilla Slab", "Poppins"}
+                fontFamily={("Zilla Slab", "Poppins")}
                 color={linkColor}
                 _hover={{
                   textDecoration: "none",
                   color: linkHoverColor,
                 }}
-
               >
                 {navItem.label}
               </Link>
@@ -293,7 +298,7 @@ const NAV_ITEMS = [
     label: "Research and Innovation",
     href: "/test",
   },
-  
+
   {
     label: "More",
     children: [
@@ -312,7 +317,7 @@ const NAV_ITEMS = [
       {
         label: "Industry Collaboration",
         href: "/test",
-      }
+      },
     ],
   },
 ];
