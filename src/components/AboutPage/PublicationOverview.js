@@ -1,5 +1,6 @@
 import React from "react";
 import { Stack, Heading, Text, Button } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 function PublicationOverview() {
   return (
@@ -49,9 +50,16 @@ function PublicationOverview() {
           Institute or journal title (2023)
         </Text>
         <br />
-        <Button colorScheme="teal" variant="outline" fontFamily={"Zilla Slab", "Poppins"} fontWeight={300}>
-          View All Publications
-        </Button>
+        <Link to="/test">
+          <Button
+            colorScheme="teal"
+            variant="outline"
+            fontFamily={("Zilla Slab", "Poppins")}
+            fontWeight={300}
+          >
+            View All Publications
+          </Button>
+        </Link>
       </Stack>
     </Stack>
   );
