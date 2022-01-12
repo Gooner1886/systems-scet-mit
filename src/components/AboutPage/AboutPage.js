@@ -1,7 +1,7 @@
 import { ChakraProvider, Divider, VStack,Box } from "@chakra-ui/react";
 import Designation from "./Designation";
 import Introduction from "./Introduction";
-import WithSubnavigation from "./Navbar";
+import WithSubnavigation from "../Navbar/Navbar";
 import ResearchInterests from "./ResearchInterests";
 import PublicationOverview from "./PublicationOverview";
 

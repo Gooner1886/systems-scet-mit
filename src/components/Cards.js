@@ -30,9 +30,9 @@ const Cards = (props)=>{
             marginLeft={"13px"}
             >
             <Stack isInline>
-                <Badge colorScheme={"pink"} variant={"outline"} width={"50px"} textAlign={"center"}>SCET</Badge>
-                <Badge colorScheme={"blue"} variant={"outline"}  textAlign={"center"}>CSE DEPARTMENT</Badge>
-                <Badge colorScheme={"blue"} variant={"outline"}  textAlign={"center"}>TECH CLUB</Badge>
+                <Badge colorScheme={"pink"} variant={"outline"} width={"50px"} p={1} textAlign={"center"}>SCET</Badge>
+                <Badge colorScheme={"blue"} variant={"outline"}  p={1} textAlign={"center"}>CSE DEPARTMENT</Badge>
+                <Badge colorScheme={"blue"} variant={"outline"}  p={1} textAlign={"center"}>TECH CLUB</Badge>
             </Stack>
             <Text fontFamily={"initial"} 
                 fontWeight={"semibold"}
@@ -58,6 +58,7 @@ const Cards = (props)=>{
             <Button colorScheme="pink"
              variant='outline' 
              width={"90px"} 
+             onClick={()=>window.open("https://innovators-hub.in")}
              padding={"2px"} 
              height={"30px"}
              fontSize={"12px"}
@@ -94,9 +95,9 @@ const Cards = (props)=>{
             marginLeft={"13px"}
             >
             <Stack isInline>
-                <Badge colorScheme={"pink"} variant={"outline"} width={"50px"} textAlign={"center"}>SCET</Badge>
-                <Badge colorScheme={"blue"} variant={"outline"}  textAlign={"center"}>CSE DEPARTMENT</Badge>
-                <Badge colorScheme={"blue"} variant={"outline"}  textAlign={"center"}>TECH CLUB</Badge>
+                <Badge colorScheme={"pink"} variant={"outline"} width={"50px"} p={1} textAlign={"center"}>SCET</Badge>
+                <Badge colorScheme={"blue"} variant={"outline"} p={1} textAlign={"center"}>CSE DEPARTMENT</Badge>
+                <Badge colorScheme={"blue"} variant={"outline"} p={1} textAlign={"center"}>TECH CLUB</Badge>
             </Stack>
             <Text fontFamily={"initial"} 
                 fontWeight={"semibold"}
@@ -124,6 +125,7 @@ const Cards = (props)=>{
              width={"90px"} 
              padding={"2px"} 
              height={"30px"}
+             onClick={()=>window.open("https://innovators-hub.in")}
              fontSize={"12px"}
              marginLeft={"90px"}
              marginTop={"10px"}
@@ -158,9 +160,9 @@ const Cards = (props)=>{
             marginLeft={"13px"}
             >
             <Stack isInline>
-                <Badge colorScheme={"pink"} variant={"outline"} width={"50px"} textAlign={"center"}>SCET</Badge>
-                <Badge colorScheme={"blue"} variant={"outline"}  textAlign={"center"}>CSE DEPARTMENT</Badge>
-                <Badge colorScheme={"blue"} variant={"outline"}  textAlign={"center"}>TECH CLUB</Badge>
+                <Badge colorScheme={"pink"} variant={"outline"} width={"50px"} p={1} textAlign={"center"}>SCET</Badge>
+                <Badge colorScheme={"blue"} variant={"outline"} p={1} textAlign={"center"}>CSE DEPARTMENT</Badge>
+                <Badge colorScheme={"blue"} variant={"outline"} p={1} textAlign={"center"}>TECH CLUB</Badge>
             </Stack>
             <Text fontFamily={"initial"} 
                 fontWeight={"semibold"}
@@ -191,6 +193,7 @@ const Cards = (props)=>{
              fontSize={"12px"}
              marginLeft={"90px"}
              marginTop={"10px"}
+             onClick={()=>window.open("https://innovators-hub.in")}
              _hover={{
                 bg: 'white',
                 outline: "none",

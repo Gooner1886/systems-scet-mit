@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import "./About.css";
 import Dummy from "./1.png";
-import WithSubnavigation from "../AboutPage/Navbar"
+import WithSubnavigation from "../Navbar/Navbar"
 import {Box} from "@chakra-ui/react"
 
 const Landing = () => {

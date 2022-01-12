@@ -4,8 +4,6 @@ import { useEffect, useState } from 'react';
 
 function CheckSignIn(callback)
 {
-    const [uid,setuid]=useState(null);
-
     let token=localStorage.getItem('token');
     let url="https://identitytoolkit.googleapis.com/v1/accounts:lookup?key=AIzaSyD_IpvEOmupo-tfIcWtkJ7nQSeLfuqiiwQ";
 

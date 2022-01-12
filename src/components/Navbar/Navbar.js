@@ -22,6 +22,8 @@ import {
   ChevronRightIcon,
 } from "@chakra-ui/icons";
 
+import {Link as ReactLink} from "react-router-dom";
+
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
 
@@ -83,6 +85,7 @@ export default function WithSubnavigation() {
           >
             Sign In
           </Button> */}
+          <ReactLink to="/login">
           <Button
             display={{ base: "none", md: "inline-flex" }}
             fontSize={"sm"}
@@ -90,13 +93,13 @@ export default function WithSubnavigation() {
             fontFamily={("Zilla Slab", "Poppins")}
             color={"white"}
             bg={"pink.400"}
-            href={"#"}
             _hover={{
               bg: "pink.300",
             }}
           >
             Log In
           </Button>
+          </ReactLink>
         </Stack>
       </Flex>
 
@@ -272,40 +275,44 @@ const MobileNavItem = ({ label, children, href }) => {
 const NAV_ITEMS = [
   {
     label: "Publications",
-    href: "#",
+    href: "/test",
   },
   {
     label: "Curriculum Development",
-    href: "#",
+    href: "/test",
   },
   {
-    label: "Inspiration",
-    children: [
-      {
-        label: "Explore Design Work",
-        subLabel: "Trending Design to inspire you",
-        href: "#",
-      },
-      {
-        label: "New & Noteworthy",
-        subLabel: "Up-and-coming Designers",
-        href: "#",
-      },
-    ],
+    label: "Academic Monitoring",
+    href: "/test",
   },
   {
-    label: "Find Work",
+    label: "Infrastructure and labs",
+    href: "/test",
+  },
+  {
+    label: "Research and Innovation",
+    href: "/test",
+  },
+  
+  {
+    label: "More",
     children: [
       {
-        label: "Job Board",
-        subLabel: "Find your dream design job",
-        href: "#",
+        label: "Student Clubs",
+        href: "/card",
       },
       {
-        label: "Freelance Projects",
-        subLabel: "An exclusive list for contract work",
-        href: "#",
+        label: "Projects, Seminars and Workshops",
+        href: "/test",
       },
+      {
+        label: "Quality Improvement",
+        href: "/test",
+      },
+      {
+        label: "Industry Collaboration",
+        href: "/test",
+      }
     ],
   },
 ];

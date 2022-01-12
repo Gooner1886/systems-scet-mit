@@ -1,8 +1,9 @@
-import WithSubnavigation from "../AboutPage/Navbar"
+import WithSubnavigation from "../Navbar/Navbar"
 import {Box,Button,Center,Container, Input, Stack} from "@chakra-ui/react"
 import {LockIcon} from "@chakra-ui/icons"
 import { useEffect, useState } from "react"
 import {useLoginInterface,CheckSignIn} from "../Hooks.js"
+import { Link } from "react-router-dom"
 
 
 function LoginPage()
@@ -16,6 +17,7 @@ function LoginPage()
 
     const HandleSubmit=()=>{
         console.log(useLoginInterface({"email":email,"password":password}));
+        
     }
 
 
