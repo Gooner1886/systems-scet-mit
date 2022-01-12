@@ -34,10 +34,14 @@ function useLoginInterface(props){
         const expirationDate = new Date(new Date().getTime() + response.data.expiresIn * 1000);                 //EXPIRES IN 1 HR
         localStorage.setItem('token', response.data.idToken);                   
         localStorage.setItem('expirationDate', expirationDate);
+        window.location.reload();
         console.log("LOGGED IN");
     })
     .catch((err)=>{
         console.log(err.response.data.error.message);
+        let st=err.response.data.error.message;
+        st=st.replace("_"," ");
+        alert(st);
     });
 }
 

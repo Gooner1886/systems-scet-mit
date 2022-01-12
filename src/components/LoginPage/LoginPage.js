@@ -3,7 +3,7 @@ import {Box,Button,Center,Container, Input, Stack} from "@chakra-ui/react"
 import {LockIcon} from "@chakra-ui/icons"
 import { useEffect, useState } from "react"
 import {useLoginInterface,CheckSignIn} from "../Hooks.js"
-import { Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 
 function LoginPage()
@@ -11,13 +11,14 @@ function LoginPage()
     const [email,setemail]=useState("");
     const [password,setpassword]=useState("");
     const [isLoggedIn,SetLogged]=useState(null);
+    const navigate=useNavigate();
 
     CheckSignIn(SetLogged);
     useEffect(()=>{console.log("uid is",isLoggedIn)},[isLoggedIn]);
 
+
     const HandleSubmit=()=>{
-        console.log(useLoginInterface({"email":email,"password":password}));
-        
+        console.log(useLoginInterface({"email":email,"password":password}));    
     }
 
 
@@ -30,6 +31,8 @@ function LoginPage()
 
     return <div style={backgroundStyle}>
     <WithSubnavigation/>
+
+    {isLoggedIn?navigate("/about"):undefined}
 
     <Container margin='auto'>
         <Box 
