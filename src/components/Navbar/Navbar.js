@@ -22,10 +22,11 @@ import {
   ChevronRightIcon,
 } from "@chakra-ui/icons";
 
-import { Link as ReactLink } from "react-router-dom";
+import { useNavigate, Link as ReactLink } from "react-router-dom";
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
+  const navigate=useNavigate();
 
   return (
     <Box>
@@ -55,16 +56,16 @@ export default function WithSubnavigation() {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
-          <a href="/">
-            <Text
+          <Button
               textAlign={useBreakpointValue({ base: "center", md: "left" })}
               fontFamily={("Zilla Slab", "Poppins")}
-              color={useColorModeValue("gray.800", "white")}
               fontSize={"xl"}
+              colorScheme='transparent'
+              textColor={'gray.800'}
+              onClick={() => {navigate("/")}}
             >
               Home
-            </Text>
-          </a>
+            </Button>
 
           <Flex
             display={{ base: "none", md: "flex" }}
@@ -120,6 +121,7 @@ const DesktopNav = () => {
   const linkColor = useColorModeValue("gray.600", "gray.200");
   const linkHoverColor = useColorModeValue("gray.800", "white");
   const popoverContentBgColor = useColorModeValue("white", "gray.800");
+  const navigate = useNavigate();
 
   return (
     <Stack direction={"row"} spacing={8}>
@@ -129,7 +131,7 @@ const DesktopNav = () => {
             <PopoverTrigger>
               <Link
                 p={2}
-                href={navItem.href ?? "#"}
+                onClick={() => {navigate(navItem.href)}}
                 fontSize={"md"}
                 fontWeight={375}
                 fontFamily={("Zilla Slab", "Poppins")}
@@ -167,9 +169,11 @@ const DesktopNav = () => {
 };
 
 const DesktopSubNav = ({ label, href, subLabel }) => {
+  const navigate = useNavigate();
+
   return (
     <Link
-      href={href}
+      onClick={() => {navigate(href)}}
       role={"group"}
       display={"block"}
       p={2}
