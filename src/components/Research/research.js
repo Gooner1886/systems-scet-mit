@@ -38,14 +38,14 @@ const Research = () => {
           >
         
         <Tabs isLazy onChange={handleTabsChange} defaultIndex={Number(params.id)} index={Number(currIndex)} width="-moz-max-content" isFitted={true} textColor="black" variant='solid-rounded' borderRadius="2%" >
-          <TabList>
+          <TabList marginTop={"50px"}>
             <Tab>Publications</Tab>
             <Tab>Grants</Tab>
             <Tab>Research Projects</Tab>
             <Tab>Patents</Tab>
           </TabList>
 
-          <TabPanels>
+          <TabPanels marginTop={"60px"} marginBottom={"50px"}>
             <TabPanel>
               <VStack spacing={String(window.screen.height / 50)} >
                 <HStack spacing={String(window.screen.width / 50)}>
