@@ -22,11 +22,13 @@ import {
   ChevronRightIcon,
 } from "@chakra-ui/icons";
 
-import { useNavigate, Link as ReactLink } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 
 export default function WithSubnavigation() {
+  
   const { isOpen, onToggle } = useDisclosure();
   const navigate = useNavigate();
+
   return (
     <Box>
       <Flex
@@ -289,3 +291,4 @@ const NAV_ITEMS = [
     href: "/card",
   },
 ];
+export {WithSubnavigation};

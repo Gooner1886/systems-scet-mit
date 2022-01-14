@@ -1,10 +1,10 @@
 import WithSubnavigation from "../Navbar/PreLoginNavbar"
 import {Box,Button,Center,Container, Input, Stack} from "@chakra-ui/react"
 import {LockIcon} from "@chakra-ui/icons"
-import { useEffect, useState } from "react"
+import { useEffect, useState,useContext } from "react"
 import {useLoginInterface,CheckSignIn} from "../Hooks.js"
 import { useNavigate } from "react-router-dom"
-
+import Logged from "../context"
 
 function LoginPage()
 {
@@ -13,12 +13,15 @@ function LoginPage()
     const [isLoggedIn,SetLogged]=useState(null);
     const navigate=useNavigate();
 
+    const user=useContext(Logged);
+
     CheckSignIn(SetLogged);
     useEffect(()=>{console.log("uid is",isLoggedIn)},[isLoggedIn]);
 
 
     const HandleSubmit=()=>{
-        console.log(useLoginInterface({"email":email,"password":password}));    
+        console.log(useLoginInterface({"email":email,"password":password,"setter":user.setter}));
+        console.log(CheckSignIn(SetLogged));
     }
 
 
