@@ -1,15 +1,19 @@
 import styled from "styled-components";
 import "./About.css";
-import Dummy from "./1.png";
-import WithSubnavigation from "../Navbar/PreLoginNavbar"
 import {Box, HStack, Center} from "@chakra-ui/react";
 import { Category, ChartComponent, ColumnSeries, DataLabel, Inject, Legend, LineSeries, SeriesCollectionDirective, SeriesDirective, Tooltip } from '@syncfusion/ej2-react-charts';
+import {WithSubnavigation as PreLogin} from "../Navbar/PreLoginNavbar";
+import {WithSubnavigation as PostLogin} from "../Navbar/Navbar"
+import Logged from "../context"
+import { useContext } from "react";
 
 const Landing = () => {
+  
+  const user=useContext(Logged);
 
   return (
-    <>
-    <WithSubnavigation />
+  <>
+    {user.value?<PostLogin/>:<PreLogin/>}
     <Parent>
       <div style={{backgroundImage:`url(${process.env.PUBLIC_URL + "/banner.png"})`,backgroundRepeat:"no-repeat", width: window.screen.availWidth*0.955}}>
         <HeaderCard>
@@ -57,7 +61,7 @@ const Landing = () => {
         <Box padding={String(window.screen.width / 20)} >
 
           <Center>
-            <HStack spacing={String(window.screen.width / 20)}>
+            <HStack spacing={String(window.screen.width / 50)}>
               // Journal
               <Box>
                 <ChartComponent palettes={['#000000']} border={ { width: 2, color: '#000000' }} chartArea={ { background: 'skyblue', width: '90%' }} title='Journal Citations' subTitle='Citations since 2017' primaryXAxis={ { valueType: 'Category' }} width={String(window.screen.width / 3.5)} height={String(window.screen.height * 2 / 5)}>
@@ -94,7 +98,7 @@ const Landing = () => {
       </div>
 
     </Parent>
-    <Box w='100%' p={4} color='white' overflowX='hidden' textAlign='center' bgColor='rgba(66, 153, 225, 0.6)'> System-SCET@MITWPU </Box>undefined
+    <Box w='100%' p={4} color='white' overflowX='hidden' textAlign='center' bgColor='rgba(66, 153, 225, 0.6)'> System-SCET@MITWPU </Box>
   </>
   );
 };

@@ -1,11 +1,23 @@
-import { ChakraProvider, Divider, VStack,Box } from "@chakra-ui/react";
+import { Divider, VStack,Box } from "@chakra-ui/react";
 import Designation from "./Designation";
 import Introduction from "./Introduction";
 import WithSubnavigation from "../Navbar/Navbar";
 import ResearchInterests from "./ResearchInterests";
 import PublicationOverview from "./PublicationOverview";
+import { useContext, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import Logged from "../context"
+
 
 function AboutPage() {
+
+  const user=useContext(Logged);
+  const navigate=useNavigate();
+  console.log(user);
+  
+  useEffect(()=>{if(!user.value) navigate("/login")},[user.value]);
+
+
   return (
       <>
       <WithSubnavigation />

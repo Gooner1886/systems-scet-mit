@@ -22,11 +22,20 @@ import {
   ChevronRightIcon,
 } from "@chakra-ui/icons";
 
-import { useNavigate, Link as ReactLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import Logged from "../context"
+import { useContext } from "react";
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
   const navigate=useNavigate();
+  const user=useContext(Logged);
+  
+
+  const HandleLogout=()=>{
+    localStorage.clear();
+    navigate("/login");
+  }
 
   return (
     <Box>
@@ -76,24 +85,15 @@ export default function WithSubnavigation() {
           </Flex>
         </Flex>
 
-        {/* <Stack
+        <Stack
           flex={{ base: 1, md: 0 }}
           justify={"flex-end"}
           direction={"row"}
           spacing={6}
         >
-          <Button
-            as={"a"}
-            fontSize={"sm"}
-            fontWeight={400}
-            fontFamily={"Zilla Slab", "Poppins"}
-            variant={"link"}
-            href={"#"}
-          >
-            Sign In
-          </Button>
-          <ReactLink to="/login">
             <Button
+              onClick={()=>{HandleLogout()}}
+              
               display={{ base: "none", md: "inline-flex" }}
               fontSize={"sm"}
               fontWeight={400}
@@ -104,10 +104,9 @@ export default function WithSubnavigation() {
                 bg: "pink.300",
               }}
             >
-              Log In
+              {user.value?"Log Out":"Log In"}
             </Button>
-          </ReactLink>
-        </Stack> */}
+        </Stack>
       </Flex>
 
       <Collapse in={isOpen} animateOpacity>
@@ -124,7 +123,7 @@ const DesktopNav = () => {
   const navigate = useNavigate();
 
   return (
-    <Stack direction={"row"} spacing={8}>
+    <Stack direction={"row"} spacing={4}>
       {NAV_ITEMS.map((navItem) => (
         <Box key={navItem.label}>
           <Popover trigger={"hover"} placement={"bottom-start"}>
@@ -337,3 +336,5 @@ const NAV_ITEMS = [
     ],
   },
 ];
+
+export {WithSubnavigation};
