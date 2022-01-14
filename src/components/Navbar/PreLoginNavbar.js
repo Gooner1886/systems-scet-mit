@@ -26,8 +26,7 @@ import { useNavigate, Link as ReactLink } from "react-router-dom";
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
-  const navigate=useNavigate();
-
+  const navigate = useNavigate();
   return (
     <Box>
       <Flex
@@ -56,7 +55,7 @@ export default function WithSubnavigation() {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
-          <Button
+            <Button
               textAlign={useBreakpointValue({ base: "center", md: "left" })}
               fontFamily={("Zilla Slab", "Poppins")}
               fontSize={"xl"}
@@ -76,38 +75,37 @@ export default function WithSubnavigation() {
           </Flex>
         </Flex>
 
-        {/* <Stack
+        <Stack
           flex={{ base: 1, md: 0 }}
           justify={"flex-end"}
           direction={"row"}
           spacing={6}
         >
-          <Button
-            as={"a"}
-            fontSize={"sm"}
-            fontWeight={400}
-            fontFamily={"Zilla Slab", "Poppins"}
-            variant={"link"}
-            href={"#"}
-          >
-            Sign In
-          </Button>
-          <ReactLink to="/login">
-            <Button
-              display={{ base: "none", md: "inline-flex" }}
+          {/* <Button
+              as={"a"}
               fontSize={"sm"}
               fontWeight={400}
-              fontFamily={("Zilla Slab", "Poppins")}
-              color={"white"}
-              bg={"pink.400"}
-              _hover={{
-                bg: "pink.300",
-              }}
+              fontFamily={"Zilla Slab", "Poppins"}
+              variant={"link"}
+              href={"#"}
             >
-              Log In
-            </Button>
-          </ReactLink>
-        </Stack> */}
+              Sign In
+            </Button> */}
+          <Button
+            display={{ base: "none", md: "inline-flex" }}
+            fontSize={"sm"}
+            fontWeight={400}
+            fontFamily={("Zilla Slab", "Poppins")}
+            color={"white"}
+            bg={"pink.400"}
+            onClick={() => {navigate("/login")}}
+            _hover={{
+              bg: "pink.300",
+            }}
+          >
+            Log In
+          </Button>
+        </Stack>
       </Flex>
 
       <Collapse in={isOpen} animateOpacity>
@@ -283,57 +281,11 @@ const MobileNavItem = ({ label, children, href }) => {
 
 const NAV_ITEMS = [
   {
-    label: "Curriculum Development",
+    label: "Research & Innovations",
     href: "/test",
   },
   {
-    label: "Academic Monitoring",
-    href: "/test",
-  },
-  {
-    label: "Teaching Learning Planning",
-    href: "/test",
-  },
-  {
-    label: "Quality Improvement",
-    href: "/test",
-  },
-  {
-    label: "Projects, Seminars & Internships",
-    href: "/test",
-  },
-
-  {
-    label: "More",
-    children: [
-      {
-        label: "FDP Add on Courses",
-        href: "/test",
-      },
-      {
-        label: "Infrastructure & Labs",
-        href: "/test",
-      },
-      {
-        label: "Student Events & Chapters",
-        href: "/card",
-      },
-      {
-        label: "Website and Social Media",
-        href: "/test",
-      },
-      {
-        label: "Industry Collaborations",
-        href: "/test",
-      },
-      {
-        label: "Research & Innovations",
-        href: "/test",
-      },
-      {
-        label: "Systems",
-        href: "/test",
-      },
-    ],
+    label: "Student Events & Chapters",
+    href: "/card",
   },
 ];

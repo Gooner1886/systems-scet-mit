@@ -1,4 +1,4 @@
-import WithSubnavigation from "../Navbar/Navbar"
+import WithSubnavigation from "../Navbar/PreLoginNavbar"
 import {Box,Button,Center,Container, Input, Stack} from "@chakra-ui/react"
 import {LockIcon} from "@chakra-ui/icons"
 import { useEffect, useState } from "react"
@@ -30,7 +30,7 @@ function LoginPage()
     }
 
     return <div style={backgroundStyle}>
-    <WithSubnavigation/>
+    <WithSubnavigation />
 
     {isLoggedIn?navigate("/about"):undefined}
 
