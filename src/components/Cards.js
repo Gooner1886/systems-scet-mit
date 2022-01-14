@@ -6,40 +6,9 @@ import Logged from "./context";
 import { Link, Route, Routes } from "react-router-dom";
 import Club from "./Club";
 
-const cards = [
-  {
-    name: "Innovators Hub",
-    image: "./thumb1.png",
-    department: "CSE",
-    type: "Tech",
-    summary:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever sincethe 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-    events: "https://www.innovators-hub.in/events",
-    achievements: "https://www.innovators-hub.in/achievements",
-  },
-  {
-    name: "Innovators Hub",
-    image: "./thumb1.png",
-    department: "CSE",
-    type: "Tech",
-    summary:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever sincethe 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-    events: "https://www.innovators-hub.in/events",
-    achievements: "https://www.innovators-hub.in/achievements",
-  },
-  {
-    name: "Innovators Hub",
-    image: "./thumb1.png",
-    department: "CSE",
-    type: "Tech",
-    summary:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever sincethe 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-    events: "https://www.innovators-hub.in/events",
-    achievements: "https://www.innovators-hub.in/achievements",
-  },
-];
 
-const Cards = () => {
+
+const Cards = (props) => {
   const user = useContext(Logged);
 
   return (
@@ -51,7 +20,7 @@ const Cards = () => {
         padding={"80px"}
         marginLeft={"150px"}
       >
-        {cards.map((card) => (
+        {props.cards.map((card) => (
           <Box
             w="300px"
             alignItems={"center"}
@@ -112,20 +81,8 @@ const Cards = () => {
             <Text isTruncated padding={"10px"} textColor={"gray"}>
               {card.summary}
             </Text>
-            <Routes>
-              <Route
-                path="/club"
-                element={
-                  <Club
-                    summary={card.summary}
-                    events={card.events}
-                    achievements={card.achievements}
-                  />
-                }
-              />
-            </Routes>
 
-            <Link to="/club">
+            <Link to={`${card.clubNo}`}>
               <Button
                 colorScheme="pink"
                 variant="outline"
