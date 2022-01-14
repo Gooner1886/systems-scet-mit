@@ -51,7 +51,7 @@ const Landing = () => {
             <ChartComponent palettes={['#035ff0']} border={ { width: 2, color: '#000000' }} title='Total Citations' subTitle='Citations by type' chartArea={ { background: 'skyblue', width: '90%' }} primaryXAxis={ { valueType: 'Category' }} width={String(window.screen.width / 2)} height={String(window.screen.height / 2)}>
               <Inject services={[ColumnSeries, Legend, Tooltip, DataLabel, LineSeries, Category]} />
               <SeriesCollectionDirective>
-                <SeriesDirective dataSource={allCitationsData} xName='CitationType' animation={{ enable: true, duration: 1200, delay: 100 }} yName='Citations' type='Column' name='Citations' />
+                <SeriesDirective dataSource={allCitationsData} xName='CitationType' animation={{ enable: true, duration: 1200, delay: 100 }} yName='Citations' type='Column' name='Citations' marker={{dataLabel:{visible:true}}}/>
               </SeriesCollectionDirective>
             </ChartComponent>
           </Box>
@@ -68,7 +68,7 @@ const Landing = () => {
                 <ChartComponent palettes={['#000000']} border={ { width: 2, color: '#000000' }} chartArea={ { background: 'skyblue', width: '90%' }} title='Journal Citations' subTitle='Citations since 2017' primaryXAxis={ { valueType: 'Category' }} width={String(window.screen.width / 3.5)} height={String(window.screen.height * 2 / 5)}>
                   <Inject services={[ColumnSeries, Legend, Tooltip, DataLabel, LineSeries, Category]} />
                   <SeriesCollectionDirective>
-                    <SeriesDirective dataSource={journalData} xName='Year' yName='Citations' animation={{ enable: true, duration: 1200, delay: 100 }} type='Line' name='Citations' marker={{ visible: true }}/>
+                    <SeriesDirective dataSource={journalData} xName='Year' yName='Citations' animation={{ enable: true, duration: 1200, delay: 100 }} type='Line' name='Citations' marker={{ visible: true, dataLabel: {visible: true} }}/>
                   </SeriesCollectionDirective>
                 </ChartComponent>
               </Box>
@@ -78,7 +78,7 @@ const Landing = () => {
                 <ChartComponent palettes={['#000000']} border={ { width: 2, color: '#000000' }} chartArea={ { background: 'skyblue', width: '90%' }} title='Book Citations' subTitle='Citations since 2017' primaryXAxis={ { valueType: 'Category' }} width={String(window.screen.width / 3.5)} height={String(window.screen.height * 2 / 5)}>
                   <Inject services={[ColumnSeries, Legend, Tooltip, DataLabel, LineSeries, Category]} />
                   <SeriesCollectionDirective>
-                    <SeriesDirective dataSource={bookData} xName='Year' yName='Citations' animation={{ enable: true, duration: 1200, delay: 100 }} type='Line' name='Citations' marker={{ visible: true }}/>
+                    <SeriesDirective dataSource={bookData} xName='Year' yName='Citations' animation={{ enable: true, duration: 1200, delay: 100 }} type='Line' name='Citations' marker={{ visible: true, dataLabel: {visible: true} }}/>
                   </SeriesCollectionDirective>
                 </ChartComponent>
               </Box>
@@ -88,7 +88,7 @@ const Landing = () => {
                 <ChartComponent palettes={['#000000']} border={ { width: 2, color: '#000000' }} chartArea={ { background: 'skyblue', width: '90%' }} title='Conference Citations' subTitle='Citations since 2017' primaryXAxis={ { valueType: 'Category' }} width={String(window.screen.width / 3.5)} height={String(window.screen.height * 2 / 5)}>
                   <Inject services={[ColumnSeries, Legend, Tooltip, DataLabel, LineSeries, Category]} />
                   <SeriesCollectionDirective>
-                    <SeriesDirective dataSource={conferenceData} xName='Year' yName='Citations' animation={{ enable: true, duration: 1200, delay: 100 }} type='Line' name='Citations' marker={{ visible: true }}/>
+                    <SeriesDirective dataSource={conferenceData} xName='Year' yName='Citations' animation={{ enable: true, duration: 1200, delay: 100 }} type='Line' name='Citations' marker={{ visible: true, dataLabel: {visible: true} }}/>
                   </SeriesCollectionDirective>
                 </ChartComponent>
               </Box>
@@ -154,17 +154,17 @@ const InfoBox = styled.div`
 
 const allCitationsData = [
   {
-    CitationType: "Journal",
-    Citations: 3154
-  },
-  {
     CitationType: "Books",
     Citations: 202
   },
   {
     CitationType: "Conferences",
     Citations: 2629
-  }
+  },
+  {
+    CitationType: "Journal",
+    Citations: 3154
+  },
 ];
 
 const journalData = [
