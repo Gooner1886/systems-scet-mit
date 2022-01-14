@@ -2,6 +2,7 @@ import AboutPage from "./components/AboutPage/AboutPage";
 import Landing from "./components/Landing/Landing";
 import LoginPage from "./components/LoginPage/LoginPage";
 import Construction from "./components/Construction";
+import Curriculum from "./components/Curriculum/Curriculum"
 import Cards from "./components/Cards";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
@@ -57,6 +58,7 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/test" element={<Construction />} />
+          <Route path="/curr" element={<Curriculum/>}/>
           <Route path="/card" element={<Cards cards={cards}/>} />
           <Route path="/card/:clubNo" element={<Club clubDetails = {cards}/>} />
           <Route path="/club" element={<Club />} />
