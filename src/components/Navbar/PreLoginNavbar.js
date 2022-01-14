@@ -27,9 +27,16 @@ import { useContext } from "react";
 import Logged from "../context";
 
 export default function WithSubnavigation() {
+  
   const { isOpen, onToggle } = useDisclosure();
   const navigate = useNavigate();
   const user=useContext(Logged);
+
+  const HandleLogout=()=>{
+    localStorage.clear();
+    navigate("/login");
+  }
+
   return (
     <Box>
       <Flex
@@ -101,7 +108,7 @@ export default function WithSubnavigation() {
             fontFamily={("Zilla Slab", "Poppins")}
             color={"white"}
             bg={"pink.400"}
-            onClick={() => {navigate("/login")}}
+            onClick={() => {user.value?HandleLogout():navigate("/login")}}
             _hover={{
               bg: "pink.300",
             }}

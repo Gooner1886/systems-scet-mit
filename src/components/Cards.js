@@ -9,7 +9,7 @@ import {
   transition,
   styled,
 } from "@chakra-ui/react";
-import WithSubnavigation from "./Navbar/Navbar";
+import WithSubnavigation from "./Navbar/PreLoginNavbar";
 
 const Cards = (props) => {
   return (
