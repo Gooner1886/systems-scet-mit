@@ -5,8 +5,6 @@
   "dependencies": {
     "@chakra-ui/icons": "^1.1.1",
     "@chakra-ui/react": "^1.7.4",
-    "@emotion/react": "^11.7.1",
-    "@emotion/styled": "^11.6.0",
     "@syncfusion/ej2-react-charts": "^19.4.42",
     "@syncfusion/ej2-react-grids": "^19.4.42",
     "@testing-library/jest-dom": "^5.16.1",
@@ -21,6 +19,7 @@
     "react-router": "^6.2.1",
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
+    "react-sticky": "^6.0.3",
     "styled-components": "^5.3.3",
     "web-vitals": "^2.1.3"
   },

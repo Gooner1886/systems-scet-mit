@@ -327,7 +327,7 @@ const NAV_ITEMS = [
       },
       {
         label: "Research & Innovations",
-        href: "/test",
+        href: "/researchpublication",
       },
       {
         label: "Systems",

@@ -1,11 +1,13 @@
 import styled from "styled-components";
 import "./About.css";
-import {Box, HStack, Center} from "@chakra-ui/react";
+import {Box, HStack, Center, Container, Image} from "@chakra-ui/react";
 import { Category, ChartComponent, ColumnSeries, DataLabel, Inject, Legend, LineSeries, SeriesCollectionDirective, SeriesDirective, Tooltip } from '@syncfusion/ej2-react-charts';
+
+import { useContext } from "react";
 import {WithSubnavigation as PreLogin} from "../Navbar/PreLoginNavbar";
 import {WithSubnavigation as PostLogin} from "../Navbar/Navbar"
 import Logged from "../context"
-import { useContext } from "react";
+
 import Footer from "../Footer";
 
 const Landing = () => {
@@ -14,12 +16,17 @@ const Landing = () => {
 
   return (
   <>
-    {user.value?<PostLogin/>:<PreLogin/>}
+  {user.value?<PostLogin/>:<PreLogin/>}
+
     <Parent>
-      <div style={{backgroundImage:`url(${process.env.PUBLIC_URL + "/banner.png"})`,backgroundRepeat:"no-repeat", width: window.screen.availWidth*0.955}}>
+      <div style={{backgroundImage:`url(${process.env.PUBLIC_URL + "/bg1.png"})`,backgroundSize:"contain", backgroundPositionX:"center" ,backgroundRepeat:"no-repeat", width: window.screen.width*0.957}}>
+        <Box height={String(window.screen.height / 20)} />
+        <Center>
+          <Image src={process.env.PUBLIC_URL + "/logo512.png"} style={{width:window.screen.width / 7.5}} borderRadius="50%" />
+        </Center>
         <HeaderCard>
-          <h1 style={{ margin: 0, color: "white" }}>MIT-WPU</h1>
-          <h1 style={{ margin: 0, marginBottom: 20, fontSize: 60 }}> School of Computer Engineering & Technology </h1>
+        {/* <h1 style={{ margin: 0, color: "white", fontWeight:'bold' }}>MIT-WPU</h1> */}
+          <h1 style={{ margin: 0, marginBottom: 20, fontSize: 60, color: 'white', fontWeight:'bold' }}> School of Computer Engineering & Technology </h1>
           <TextBox style={{color:"white"}}>
             <p></p>
           </TextBox>
@@ -29,7 +36,7 @@ const Landing = () => {
           <div className="row1-container">
             <div className="box blue" style={{background:"white"}}>
               <h2 style={{ fontWeight: "bold", fontSize: 35 }}>3154</h2>
-              <p>Research Paper citations in Journals</p>
+              <p color="black" >Research Paper citations in Journals</p>
               <img src="https://assets.codepen.io/2301174/icon-calculator.svg" alt="" />
             </div>
             <div className="box orange" style={{background:"white"}}>
@@ -100,6 +107,7 @@ const Landing = () => {
 
     </Parent>
     <Footer />
+
   </>
   );
 };
