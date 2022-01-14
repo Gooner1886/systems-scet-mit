@@ -6,9 +6,10 @@ import {WithSubnavigation as PreLogin} from "../Navbar/PreLoginNavbar";
 import {WithSubnavigation as PostLogin} from "../Navbar/Navbar"
 import Logged from "../context"
 import { useContext } from "react";
+import Footer from "../Footer";
 
 const Landing = () => {
-  
+
   const user=useContext(Logged);
 
   return (
@@ -56,13 +57,13 @@ const Landing = () => {
           </Box>
 
         </Center>
-        
 
-        <Box padding={String(window.screen.width / 20)} >
+
+        <Box p='50' >
 
           <Center>
-            <HStack spacing={String(window.screen.width / 50)}>
-              // Journal
+            <HStack spacing='30'>
+              {/*// Journal*/}
               <Box>
                 <ChartComponent palettes={['#000000']} border={ { width: 2, color: '#000000' }} chartArea={ { background: 'skyblue', width: '90%' }} title='Journal Citations' subTitle='Citations since 2017' primaryXAxis={ { valueType: 'Category' }} width={String(window.screen.width / 3.5)} height={String(window.screen.height * 2 / 5)}>
                   <Inject services={[ColumnSeries, Legend, Tooltip, DataLabel, LineSeries, Category]} />
@@ -72,7 +73,7 @@ const Landing = () => {
                 </ChartComponent>
               </Box>
 
-              // Book
+              {/*// Book*/}
               <Box>
                 <ChartComponent palettes={['#000000']} border={ { width: 2, color: '#000000' }} chartArea={ { background: 'skyblue', width: '90%' }} title='Book Citations' subTitle='Citations since 2017' primaryXAxis={ { valueType: 'Category' }} width={String(window.screen.width / 3.5)} height={String(window.screen.height * 2 / 5)}>
                   <Inject services={[ColumnSeries, Legend, Tooltip, DataLabel, LineSeries, Category]} />
@@ -82,7 +83,7 @@ const Landing = () => {
                 </ChartComponent>
               </Box>
 
-              // Conference
+              {/*// Conference*/}
               <Box>
                 <ChartComponent palettes={['#000000']} border={ { width: 2, color: '#000000' }} chartArea={ { background: 'skyblue', width: '90%' }} title='Conference Citations' subTitle='Citations since 2017' primaryXAxis={ { valueType: 'Category' }} width={String(window.screen.width / 3.5)} height={String(window.screen.height * 2 / 5)}>
                   <Inject services={[ColumnSeries, Legend, Tooltip, DataLabel, LineSeries, Category]} />
@@ -94,11 +95,11 @@ const Landing = () => {
             </HStack>
           </Center>
         </Box>
-        
+
       </div>
 
     </Parent>
-    <Box w='100%' p={4} color='white' overflowX='hidden' textAlign='center' bgColor='rgba(66, 153, 225, 0.6)'> System-SCET@MITWPU </Box>
+    <Footer />
   </>
   );
 };
@@ -169,7 +170,7 @@ const allCitationsData = [
 const journalData = [
   {
     Year: '2017',
-    Citations: '418' 
+    Citations: '418'
   },
   {
     Year: '2018',
@@ -192,7 +193,7 @@ const journalData = [
 const bookData = [
   {
     Year: '2017',
-    Citations: '10' 
+    Citations: '10'
   },
   {
     Year: '2018',
@@ -215,7 +216,7 @@ const bookData = [
 const conferenceData = [
   {
     Year: '2017',
-    Citations: '311' 
+    Citations: '311'
   },
   {
     Year: '2018',
