@@ -10,8 +10,8 @@ ReactDOM.render(
     <ChakraProvider>
       <App />
       {/*  <StudentCards/> */}
-    </ChakraProvider>
-    ,
+    </ChakraProvider>,
+    
   </React.StrictMode>,
   document.getElementById("root")
 );

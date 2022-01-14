@@ -133,7 +133,7 @@ export default function Footer() {
                     spacing={4}
                     justify={{ md: 'space-between' }}
                     align={{ md: 'center' }}>
-                    <Text>© 2022 MIT-WPU. All rights reserved</Text>
+                    <Text>© 2022 MIT-WPU SCET. All rights reserved</Text>
                 </Container>
             </Box>
         </Box>

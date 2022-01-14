@@ -284,6 +284,8 @@ const MobileNavItem = ({ label, children, href }) => {
 const NAV_ITEMS = [
   {
     label: "Research & Innovations",
+    href: "/researchpublication",
+  
     children: [
       {
         label: "Publications",

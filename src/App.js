@@ -5,8 +5,10 @@ import Construction from "./components/Construction";
 import Cards from "./components/Cards";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
+
 import Logged from "./components/context.js";
 import Club from "./components/Club";
+import Research from "./components/Research/research";
 
 const cards = [
   {

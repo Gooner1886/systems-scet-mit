@@ -33,7 +33,7 @@ function LoginPage()
         "width":"100%"
     }
 
-    return <div style={backgroundStyle}>
+    return (<div style={backgroundStyle}>
     <WithSubnavigation />
 
     {isLoggedIn?navigate("/about"):undefined}
@@ -64,7 +64,7 @@ function LoginPage()
     <Box w='100%' p={4} position='fixed' bottom='0' color='white' overflowX='hidden' textAlign='center' bgColor='rgba(66, 153, 225)'>
             System-SCET@MITWPU
     </Box>
-    </div>
+    </div>);
 }
 
 export default LoginPage;
