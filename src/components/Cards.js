@@ -32,7 +32,7 @@ const Cards = (props) => {
           overflow={"hidden"}
           rounded={"20px"}
           padding={"1px"}
-          height={"420px"}
+          height={"450px"}
         >
           <Image src="./thumb1.png" />
           <Box
