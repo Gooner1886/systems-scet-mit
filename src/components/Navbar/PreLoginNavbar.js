@@ -284,11 +284,37 @@ const MobileNavItem = ({ label, children, href }) => {
 const NAV_ITEMS = [
   {
     label: "Research & Innovations",
-    href: "/test",
-  },
+    children: [
+      {
+        label: "Publications",
+        href: "/test",
+      },
+      {
+        label: "Grants",
+        href: "/test",
+      },
+      {
+        label: "Research Projects",
+        href: "/test",
+      },
+      {
+        label: "Patents",
+        href: "/test",
+      },
+    ],
+  },  
   {
-    label: "Student Events & Chapters",
-    href: "/card",
+    label: "Student Corner",
+    children: [
+      {
+        label: "Curricular",
+        href: "/test",
+      },
+      {
+        label: "Student Clubs",
+        href: "/card",
+      },
+    ],
   },
 ];
 export {WithSubnavigation};
