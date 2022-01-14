@@ -94,7 +94,7 @@ const Landing = () => {
       </div>
 
     </Parent>
-    <Box w='100%' p={4} color='white' overflowX='hidden' textAlign='center' bgColor='rgba(66, 153, 225, 0.6)'> System-SCET@MITWPU </Box>undefined
+    <Box w='100%' p={4} color='white' overflowX='hidden' textAlign='center' bgColor='rgba(66, 153, 225, 0.6)'> System-SCET@MITWPU </Box>
   </>
   );
 };

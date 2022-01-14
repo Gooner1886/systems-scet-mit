@@ -5,9 +5,7 @@ import {
   Image,
   Stack,
   Text,
-  Button,
-  transition,
-  styled,
+  Button
 } from "@chakra-ui/react";
 import WithSubnavigation from "./Navbar/Navbar";
 
