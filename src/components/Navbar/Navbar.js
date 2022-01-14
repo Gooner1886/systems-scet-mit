@@ -283,7 +283,7 @@ const MobileNavItem = ({ label, children, href }) => {
 const NAV_ITEMS = [
   {
     label: "Curriculum Development",
-    href: "/test",
+    href: "/curr",
   },
   {
     label: "Academic Monitoring",
