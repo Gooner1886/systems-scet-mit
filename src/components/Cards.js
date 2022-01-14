@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   Badge,
   Box,
@@ -9,12 +9,16 @@ import {
   transition,
   styled,
 } from "@chakra-ui/react";
-import WithSubnavigation from "./Navbar/PreLoginNavbar";
+import {WithSubnavigation as PreLogin} from "./Navbar/PreLoginNavbar";
+import {WithSubnavigation as PostLogin} from "./Navbar/Navbar"
+import Logged from "./context"
 
 const Cards = (props) => {
+  const user=useContext(Logged);
+
   return (
     <>
-      <WithSubnavigation />
+      {user.value?<PostLogin/>:<PreLogin/>}
       <Stack
         direction={["column", "row"]}
         spacing="100px"

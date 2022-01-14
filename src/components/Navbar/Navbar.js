@@ -336,3 +336,5 @@ const NAV_ITEMS = [
     ],
   },
 ];
+
+export {WithSubnavigation};

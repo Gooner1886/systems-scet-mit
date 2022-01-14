@@ -1,15 +1,20 @@
 import styled from "styled-components";
 import "./About.css";
 import Dummy from "./1.png";
-import WithSubnavigation from "../Navbar/PreLoginNavbar"
 import {Box, HStack, Center} from "@chakra-ui/react";
 import { Category, ChartComponent, ColumnSeries, DataLabel, Inject, Legend, LineSeries, SeriesCollectionDirective, SeriesDirective, Tooltip } from '@syncfusion/ej2-react-charts';
+import {WithSubnavigation as PreLogin} from "../Navbar/PreLoginNavbar";
+import {WithSubnavigation as PostLogin} from "../Navbar/Navbar"
+import Logged from "../context"
+import { useContext } from "react";
 
 const Landing = () => {
+  
+  const user=useContext(Logged);
 
   return (
-    <>
-    <WithSubnavigation />
+  <>
+    {user.value?<PostLogin/>:<PreLogin/>}
     <Parent>
       <div style={{backgroundImage:`url(${process.env.PUBLIC_URL + "/banner.png"})`,backgroundRepeat:"no-repeat", width: window.screen.availWidth*0.955}}>
         <HeaderCard>
