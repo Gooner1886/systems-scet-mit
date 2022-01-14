@@ -284,24 +284,24 @@ const MobileNavItem = ({ label, children, href }) => {
 const NAV_ITEMS = [
   {
     label: "Research & Innovations",
-    href: "/researchpublication",
+    href: "/researchpublication/0",
   
     children: [
       {
         label: "Publications",
-        href: "/test",
+        href: "/researchpublication/0",
       },
       {
         label: "Grants",
-        href: "/test",
+        href: "/researchpublication/1",
       },
       {
         label: "Research Projects",
-        href: "/test",
+        href: "/researchpublication/2",
       },
       {
         label: "Patents",
-        href: "/test",
+        href: "/researchpublication/3",
       },
     ],
   },  

@@ -23,7 +23,7 @@ function App() {
           <Route path="/test" element={<Construction />} />
           <Route path="/card" element={<Cards />} />
           <Route path="/club" element={<Club />} />
-          <Route path="/researchpublication" element={<Research/>}/>
+          <Route path="/researchpublication/:id" element={<Research/>}/>
         </Routes>
       </BrowserRouter>{" "}
     </Logged.Provider>
