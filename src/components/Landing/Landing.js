@@ -2,7 +2,7 @@ import styled from "styled-components";
 import "./About.css";
 import Dummy from "./1.png";
 import WithSubnavigation from "../Navbar/PreLoginNavbar"
-import {Box, Stack, Image, color, background, Container} from "@chakra-ui/react";
+import {Box} from "@chakra-ui/react";
 const Landing = () => {
   return (
     <>

@@ -22,11 +22,14 @@ import {
   ChevronRightIcon,
 } from "@chakra-ui/icons";
 
-import { useNavigate, Link as ReactLink } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
+import { useContext } from "react";
+import Logged from "../context";
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
   const navigate = useNavigate();
+  const user=useContext(Logged);
   return (
     <Box>
       <Flex
@@ -103,7 +106,7 @@ export default function WithSubnavigation() {
               bg: "pink.300",
             }}
           >
-            Log In
+            {user.value?"Log Out":"Log In"}
           </Button>
         </Stack>
       </Flex>

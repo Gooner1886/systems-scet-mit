@@ -1,15 +1,24 @@
 import {
   Box,
-  Heading,
   Text,
   Image,
   Stack,
-  Badge,
   Button,
 } from "@chakra-ui/react";
 import WithSubnavigation from "./Navbar/Navbar";
+import { useContext, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import Logged from "./context"
+
 
 function Construction(props) {
+  
+  const user=useContext(Logged);
+  const navigate=useNavigate();
+  console.log(user);
+  
+  useEffect(()=>{if(!user.value) navigate("/login")},[user.value]);
+
   return (
     <>
       <WithSubnavigation />

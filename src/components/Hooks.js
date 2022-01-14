@@ -1,23 +1,24 @@
 import axios from 'axios';
-import { useEffect, useState } from 'react';
-
+import { useContext, useEffect} from 'react';
+import Logged from "./context"
 
 function CheckSignIn(callback)
 {
     let token=localStorage.getItem('token');
     let url="https://identitytoolkit.googleapis.com/v1/accounts:lookup?key=AIzaSyD_IpvEOmupo-tfIcWtkJ7nQSeLfuqiiwQ";
+    const user=useContext(Logged);
 
     useEffect(()=>{
     axios.post(url,{idToken:token})                                 //GET USERNAME CORRESPONDING TO TOKEN
-    .then((response)=>{callback(response.data.users[0].localId)})
+    .then((response)=>{user.setter(true);callback(response.data.users[0].localId)})
     .catch((err)=>{
+        user.setter(false);
         console.log("Not Logged In")}
     )},[url]);
 }
 
 
 function useLoginInterface(props){
-
     let email=props.email;
     let password=props.password;
 
@@ -44,5 +45,6 @@ function useLoginInterface(props){
         alert(st);
     });
 }
+
 
 export {useLoginInterface,CheckSignIn};
