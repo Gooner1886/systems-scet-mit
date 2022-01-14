@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import "./About.css";
-import Dummy from "./1.png";
 import {Box, HStack, Center} from "@chakra-ui/react";
 import { Category, ChartComponent, ColumnSeries, DataLabel, Inject, Legend, LineSeries, SeriesCollectionDirective, SeriesDirective, Tooltip } from '@syncfusion/ej2-react-charts';
 import {WithSubnavigation as PreLogin} from "../Navbar/PreLoginNavbar";
@@ -62,7 +61,7 @@ const Landing = () => {
         <Box padding={String(window.screen.width / 20)} >
 
           <Center>
-            <HStack spacing={String(window.screen.width / 20)}>
+            <HStack spacing={String(window.screen.width / 50)}>
               // Journal
               <Box>
                 <ChartComponent palettes={['#000000']} border={ { width: 2, color: '#000000' }} chartArea={ { background: 'skyblue', width: '90%' }} title='Journal Citations' subTitle='Citations since 2017' primaryXAxis={ { valueType: 'Category' }} width={String(window.screen.width / 3.5)} height={String(window.screen.height * 2 / 5)}>

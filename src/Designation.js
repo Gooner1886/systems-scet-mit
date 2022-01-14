@@ -2,8 +2,6 @@ import { Box, Heading, Text, VStack } from "@chakra-ui/react";
 import React from "react";
 import { Icon } from '@chakra-ui/icons';
 import { FaLinkedinIn } from "react-icons/fa";
-import { InfoIcon } from "@chakra-ui/icons";
-import { icons } from "react-icons/lib";
 
 
 function Designation() {
