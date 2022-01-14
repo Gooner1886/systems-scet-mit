@@ -26,7 +26,8 @@ function LoginPage()
 
 
     const backgroundStyle={
-        "background":"linear-gradient(90deg, #4b6cb7 0%, #182848 100%)",
+        "backgroundImage":`url(${process.env.PUBLIC_URL + "/banner.png"})`,
+        "backgroundRepeat":"no-repeat",
         "position":"fixed",
         "height":"100%",
         "width":"100%"
@@ -60,7 +61,7 @@ function LoginPage()
         </Box>
     </Container>
 
-    <Box w='100%' p={4} position='fixed' bottom='0' color='white' overflowX='hidden' textAlign='center' bgColor='rgba(66, 153, 225, 0.6)'>
+    <Box w='100%' p={4} position='fixed' bottom='0' color='white' overflowX='hidden' textAlign='center' bgColor='rgba(66, 153, 225)'>
             System-SCET@MITWPU
     </Box>
     </div>
