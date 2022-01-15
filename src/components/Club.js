@@ -90,27 +90,17 @@ const breakpoints = createBreakpoints({
       textShadow={"2xl"} 
       padding={"30px"}
       borderBottom={"1px"}
-    >INNOVATORS HUB</Text> 
+    >{currentClubArray[0].name}</Text> 
   </Box>
 
   <Box marginTop={"0px"} padding={"40px"} textAlign={"center"}>
-      <Text>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
-         dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-         It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-         It was popularised in the 1960s with the release of Letraset sheets containing 
-        Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of 
-        Lorem Ipsum. It is a long established fact that a reader will be distracted by the readable content of a page when looking 
-        at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to 
-        using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page
-         editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still 
-         in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose
-          (injected humour and the like).
+      <Text>{currentClubArray[0].summary}
         </Text>
         <Box marginTop={"50px"} color={"whiteAlpha.800"} textShadow={"md"}>
 
         <Button marginRight={"40px"} backgroundColor={"blue.500"} variant={"outline"} colorScheme={"blue"}
          textColor={"whiteAlpha.800"} paddingRight={"40px"} paddingLeft={"40px"}
-         onClick={() => window.open("https://www.innovators-hub.in/events")}
+         onClick={() => window.open(currentClubArray[0].events)}
          _hover={{
            cursor:'pointer',
            color: 'black',
@@ -123,7 +113,7 @@ const breakpoints = createBreakpoints({
          >EVENTS</Button>
 
         <Button backgroundColor={"blue.500"} variant={"outline"} colorScheme={"green"}
-          onClick={()=>window.open("https://www.innovators-hub.in/achievements")}
+          onClick={()=>window.open(currentClubArray[0].achievements)}
          _hover={{
           cursor:'pointer',
           color: 'black',
