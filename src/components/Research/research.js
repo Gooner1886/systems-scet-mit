@@ -1,7 +1,8 @@
+import styled from "styled-components";
 import "../Landing/About.css";
 import React from "react";
 import { Category, ChartComponent, ColumnSeries, DataLabel, Inject, Legend, LineSeries, SeriesCollectionDirective, SeriesDirective, Tooltip } from '@syncfusion/ej2-react-charts';
-import {Flex, Box,TabList, Tab, TabPanels, TabPanel, Tabs, VStack, HStack } from "@chakra-ui/react";
+import {Flex, TabList, Tab, TabPanels, TabPanel, Tabs, VStack, Box, HStack } from "@chakra-ui/react";
 import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import {WithSubnavigation as PreLogin} from "../Navbar/PreLoginNavbar";
@@ -16,32 +17,35 @@ const Research = () => {
     const user = useContext(Logged);
     const params = useParams();
 
+    const [defIndex,setDefIndex] = useState(0);
     const [currIndex,setTabIndex] = useState(0);
     
-    const handleTabsChange = (index) => setTabIndex(index)
+    const handleTabsChange = (index) => {
+      setTabIndex(index)
+    }
     
     useEffect(() => handleTabsChange(params.id),[params])
     
 
   return (
     <>
-        {user.value?<PostLogin/>:<PreLogin/>} 
+        {user.value?<PostLogin/>:<PreLogin/>}
         <div align="left" >
 
-        <Flex justify="center" >
-        <Box flex='1'>
+        <Flex
+            display={{ base: "none", md: "block" }}
+            alignItems={"center"}
+          >
         
-        <Tabs isLazy onChange={handleTabsChange} defaultIndex={Number(params.id)} index={Number(currIndex)} isFitted={true} textColor="black" variant='solid-rounded' borderRadius="2%" >
-          <TabList>
+        <Tabs isLazy onChange={handleTabsChange} defaultIndex={Number(params.id)} index={Number(currIndex)} width="-moz-max-content" isFitted={true} textColor="black" variant='solid-rounded' borderRadius="2%" >
+          <TabList marginTop={"50px"}>
             <Tab>Publications</Tab>
             <Tab>Grants</Tab>
             <Tab>Research Projects</Tab>
             <Tab>Patents</Tab>
           </TabList>
-          
-          <TabPanels>
 
-            // Publications
+          <TabPanels marginTop={"60px"} marginBottom={"50px"}>
             <TabPanel>
               <VStack spacing={String(window.screen.height / 50)} >
                 <HStack spacing={String(window.screen.width / 50)}>
@@ -104,7 +108,6 @@ const Research = () => {
             </TabPanel>
           </TabPanels>
         </Tabs>
-        </Box>
         </Flex>
         </div>
         <Footer />
