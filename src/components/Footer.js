@@ -99,15 +99,15 @@ export default function Footer() {
 
                     <Stack align={'flex-start'}>
                         <ListHeader>Social</ListHeader>
-                        <VStack direction={'row'} spacing={3}>
-                            <Button colorScheme='facebook' leftIcon={<FaFacebook />}>
-                                Facebook
-                            </Button>
+                        <VStack direction={'row'} spacing={3} align='left'>
                             <Button colorScheme='twitter' leftIcon={<FaTwitter />}>
                                 Twitter
                             </Button>
                             <Button colorScheme='red' leftIcon={<FaYoutube />}>
                                 Youtube
+                            </Button>
+                            <Button colorScheme='facebook' leftIcon={<FaFacebook />}>
+                                Facebook
                             </Button>
                         </VStack>
                     </Stack>
