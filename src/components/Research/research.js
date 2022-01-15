@@ -33,14 +33,14 @@ const Research = () => {
         <Box flex='1'>
         
         <Tabs isLazy onChange={handleTabsChange} defaultIndex={Number(params.id)} index={Number(currIndex)} isFitted={true} textColor="black" variant='solid-rounded' borderRadius="2%" >
-          <TabList>
+          <TabList marginTop={"30px"} marginBottom={"40px"}>
             <Tab>Publications</Tab>
             <Tab>Grants</Tab>
             <Tab>Research Projects</Tab>
             <Tab>Patents</Tab>
           </TabList>
           
-          <TabPanels>
+          <TabPanels marginBottom={"40px"}>
 
             // Publications
             <TabPanel>
