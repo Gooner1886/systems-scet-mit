@@ -1,14 +1,14 @@
-import { Category, ChartComponent, ColumnSeries, DataLabel, Inject, Legend, LineSeries, SeriesCollectionDirective, SeriesDirective, Tooltip } from '@syncfusion/ej2-react-charts';
+import { Category, ChartComponent, AccumulationDataLabel, AccumulationChartComponent, AccumulationSeriesCollectionDirective, AccumulationSeriesDirective, ColumnSeries, DataLabel, Inject, Legend, LineSeries, PieSeries, SeriesCollectionDirective, SeriesDirective, Tooltip } from '@syncfusion/ej2-react-charts';
 import React from "react";
-import {Box, VStack, HStack, Text } from "@chakra-ui/react";
+import {Box, VStack, HStack, Text, Image } from "@chakra-ui/react";
 
 
 function PublicationTab() {
     return (
         <VStack spacing={String(window.screen.height / 50)} >
             <Text width="100%" fontSize={48} fontWeight={"bold"}>Publications</Text>
-            <Box padding="1%">
-                <HStack spacing={String(window.screen.width / 50)} scrollBehavior="smooth" scrollSnapType={"x"} >
+            <Box borderRadius="lg" shadow="xl" padding="1%">
+                <HStack shouldWrapChildren spacing={String(window.screen.width / 50)} maxWidth={String(window.screen.width * 0.9)} overflowX="scroll" >
                 
                 // 2017-2021 journal and conference publications
                 <ChartComponent palettes={['#035ff0',"purple"]} border={ { width: 2, color: '#000000' }} title="Faculty publications" subTitle="Publications since 2017" chartArea={ { background: 'skyblue', width: '90%' }} primaryXAxis={ { valueType: 'Category' }} width={String(window.screen.width / 3)} height={String(window.screen.height / 2)}>
@@ -30,12 +30,11 @@ function PublicationTab() {
                 </HStack>
             </Box>
 
-            <Text width="100%" fontSize={48}s fontWeight={"bold"}>Citations</Text>
-            <Box padding="1%">
-                <HStack spacing={String(window.screen.width / 50)} scrollBehavior="smooth" scrollSnapType={"x"} >
-
+            <Text width={String(window.screen.width)} alignSelf="start" fontSize={48} fontWeight={"bold"}>Citations</Text>
+            <Box borderRadius="lg" shadow="xl" padding="1%">
+                <HStack shouldWrapChildren spacing={String(window.screen.width / 50)} maxWidth={String(window.screen.width)*0.9} overflowX="scroll" >
                     // 2020-2021 citations for journal and conference publication
-                    <ChartComponent palettes={['#035ff0',"purple"]} border={ { width: 2, color: '#000000' }} title="Journal citations" subTitle="Citations 2020-2021" chartArea={ { background: 'skyblue', width: '90%' }} primaryXAxis={ { valueType: 'Category' }} width={String(window.screen.width / 3.5)} height={String(window.screen.height / 2)}>
+                    <ChartComponent palettes={['#035ff0',"purple"]} border={ { width: 2, color: '#000000' }} title="Journal citations" subTitle="Citations 2020-2021" chartArea={ { background: 'skyblue', width: '90%' }} primaryXAxis={ { valueType: 'Category' }} width={String(window.screen.width / 3)} height={String(window.screen.height / 2)}>
                         <Inject services={[ColumnSeries, Legend, Tooltip, DataLabel, LineSeries, Category]} />
                         <SeriesCollectionDirective>
                             <SeriesDirective dataSource={citation21Data[0][0]} xName={"Publication"} yName={"value"} type='Column' name='CY 2020' marker={{dataLabel:{visible:true}}} animation={{ enable: true, duration: 1200, delay: 100 }} />
@@ -43,7 +42,7 @@ function PublicationTab() {
                         </SeriesCollectionDirective>
                     </ChartComponent>
 
-                    <ChartComponent palettes={['#035ff0',"purple"]} border={ { width: 2, color: '#000000' }} title="Conference paper citations" subTitle="Citations 2020-2021" chartArea={ { background: 'skyblue', width: '90%' }} primaryXAxis={ { valueType: 'Category' }} width={String(window.screen.width / 3.5)} height={String(window.screen.height / 2)}>
+                    <ChartComponent palettes={['#035ff0',"purple"]} border={ { width: 2, color: '#000000' }} title="Conference paper citations" subTitle="Citations 2020-2021" chartArea={ { background: 'skyblue', width: '90%' }} primaryXAxis={ { valueType: 'Category' }} width={String(window.screen.width / 3)} height={String(window.screen.height / 2)}>
                         <Inject services={[ColumnSeries, Legend, Tooltip, DataLabel, LineSeries, Category]} />
                         <SeriesCollectionDirective>
                             <SeriesDirective dataSource={citation21Data[0][2]} xName={"Publication"} yName={"value"} type='Column' name='CY 2020' marker={{dataLabel:{visible:true}}} animation={{ enable: true, duration: 1200, delay: 100 }} />
@@ -51,7 +50,7 @@ function PublicationTab() {
                         </SeriesCollectionDirective>
                     </ChartComponent>
 
-                    <ChartComponent palettes={['#035ff0',"purple"]} border={ { width: 2, color: '#000000' }} title="Books / Chapter citations" subTitle="Citations 2020-2021" chartArea={ { background: 'skyblue', width: '90%' }} primaryXAxis={ { valueType: 'Category' }} width={String(window.screen.width / 3.5)} height={String(window.screen.height / 2)}>
+                    <ChartComponent palettes={['#035ff0',"purple"]} border={ { width: 2, color: '#000000' }} title="Books / Chapter citations" subTitle="Citations 2020-2021" chartArea={ { background: 'skyblue', width: '90%' }} primaryXAxis={ { valueType: 'Category' }} width={String(window.screen.width / 3)} height={String(window.screen.height / 2)}>
                         <Inject services={[ColumnSeries, Legend, Tooltip, DataLabel, LineSeries, Category]} />
                         <SeriesCollectionDirective>
                             <SeriesDirective dataSource={citation21Data[0][1]} xName={"Publication"} yName={"value"} type='Column' name='CY 2020' marker={{dataLabel:{visible:true}}} animation={{ enable: true, duration: 1200, delay: 100 }} />
@@ -68,20 +67,12 @@ function GrantRevenueTab() {
     return (
         <VStack spacing={String(window.screen.height / 50)} >
             <Text width="100%" fontSize={48}s fontWeight={"bold"}>Grants & Revenue Generation</Text>
-            <Box padding="1%">
-            <HStack spacing={String(window.screen.width / 50)}>
+            <Box borderRadius="lg" shadow="xl" padding="1%">
+            <HStack shouldWrapChildren spacing={String(window.screen.width / 50)} maxWidth={String(window.screen.width)*0.9} >
                 <ChartComponent palettes={['#035ff0',"purple"]} border={ { width: 2, color: '#000000' }} title="Grants & other revenue generations" subTitle="Grants applied since 2017" chartArea={ { background: 'skyblue', width: '90%' }} primaryXAxis={ { valueType: 'Category' }} width={String(window.screen.width / 2)} height={String(window.screen.height / 2)}>
                     <Inject services={[ColumnSeries, Legend, Tooltip, DataLabel, LineSeries, Category]} />
                     <SeriesCollectionDirective>
                         <SeriesDirective dataSource={grantData} xName={"GrantType"} yName={"value"} type='Column' name='Grants & other revenue generations' marker={{dataLabel:{visible:true}}} animation={{ enable: true, duration: 1200, delay: 100 }} />
-                    </SeriesCollectionDirective>
-                </ChartComponent>
-                
-                <ChartComponent palettes={['#035ff0',"purple"]} border={ { width: 2, color: '#000000' }} title="Faculty publications" subTitle="Publications since 2017" chartArea={ { background: 'skyblue', width: '90%' }} primaryXAxis={ { valueType: 'Category' }} width={String(window.screen.width / 3)} height={String(window.screen.height / 2)}>
-                    <Inject services={[ColumnSeries, Legend, Tooltip, DataLabel, LineSeries, Category]} />
-                    <SeriesCollectionDirective>
-                        <SeriesDirective dataSource={journalPubData} xName={"Year"} yName={"Publications"} type='Column' name='Journal' marker={{dataLabel:{visible:true}}} animation={{ enable: true, duration: 1200, delay: 100 }} />
-                        <SeriesDirective dataSource={conferencePubData} xName={"Year"} yName={"Publications"} type='Column' name='Conference' marker={{dataLabel:{visible:true}}} animation={{ enable: true, duration: 1200, delay: 100 }} />
                     </SeriesCollectionDirective>
                 </ChartComponent>
             </HStack>
@@ -89,11 +80,54 @@ function GrantRevenueTab() {
         </VStack>
     );
 }
+function ResearchProjectTab() {
+    return (
+        <VStack spacing={String(window.screen.height / 50)} >
+            <Text width="100%" fontSize={48} fontWeight={"bold"}>Research Projects Sanctioned Grants</Text>
+            <Box borderRadius="lg" shadow="xl" padding="1%">
+                <HStack shouldWrapChildren spacing={String(window.screen.width / 50)} maxWidth={String(window.screen.width)*0.9} overflowX="scroll" >
+                    <AccumulationChartComponent enableSmartLabels="true" textRender={thistextRender} >
+                        <Inject services={[AccumulationDataLabel,PieSeries]}/>
+                        <AccumulationSeriesCollectionDirective>
+                            <AccumulationSeriesDirective dataSource={ResearchProjectData} xName='Name' yName='Amount' type='Pie' dataLabel={{visible:true, color:"black" ,position: 'Outside', name: 'text'}} animation={{ enable: true, duration: 1200, delay: 100 }} >
+                            </AccumulationSeriesDirective>
+                        </AccumulationSeriesCollectionDirective>
+                    </AccumulationChartComponent>;
+                </HStack>
+            </Box>
+            <Text width="100%" fontSize={48}s fontWeight={"bold"}>Research Project Applied Grants</Text>
+            <Box borderRadius="lg" shadow="xl" padding="1%">
+                <Image src={String(process.env.PUBLIC_URL + "/researchgrantstable.png")} />
+            </Box>
+        </VStack>
+    );
+}
 
-export {GrantRevenueTab, PublicationTab}
+function PatentsTab() {
+    return (
+        <VStack spacing={String(window.screen.height / 50)} >
+            <Text width="100%" fontSize={48} fontWeight={"bold"}>Patents</Text>
+            <Box borderRadius="lg" shadow="xl" padding="1%">
+                <HStack shouldWrapChildren spacing={String(window.screen.width / 50)} maxWidth={String(window.screen.width)*0.9} overflowX="scroll" >
+                    <ChartComponent palettes={['#035ff0',"purple"]} border={ { width: 2, color: '#000000' }} title="Total patents 2017-2021" subTitle="Patents since 2017" chartArea={ { background: 'skyblue', width: '90%' }} primaryXAxis={ { valueType: 'Category' }} width={String(window.screen.width / 2)} height={String(window.screen.height / 2)}>
+                        <Inject services={[ColumnSeries, Legend, Tooltip, DataLabel, LineSeries, Category]} />
+                        <SeriesCollectionDirective>
+                            <SeriesDirective dataSource={patentData} xName={"Year"} yName={"Patents"} type='Column' name='Patents' marker={{dataLabel:{visible:true}}} animation={{ enable: true, duration: 1200, delay: 100 }} />
+                        </SeriesCollectionDirective>
+                    </ChartComponent>
+                </HStack>
+            </Box>
+        </VStack>
+    );
+}
+export {GrantRevenueTab, PublicationTab, ResearchProjectTab, PatentsTab}
 
 
-
+function thistextRender (args) {
+    console.log(args)
+    args.font.color = 'black';
+    args.text = String(args.point.x) + ":" + String(args.point.y);
+}
 
 const journalPubData = [{
     Year:2017,
@@ -279,3 +313,45 @@ const grantData = [
         "value":6768755
     }
 ]
+
+const patentData = [
+    {
+        "Year":"2017",
+        "Patents":"3"
+    },
+    {
+        "Year":"2018",
+        "Patents":"6"
+    },
+    {
+        "Year":"2019",
+        "Patents":"10"
+    },
+    {
+        "Year":"2020",
+        "Patents":"8"
+    },
+    {
+        "Year":"2021",
+        "Patents":"26"
+    },
+]
+
+const ResearchProjectData = [
+    {
+      "Name": "BCUD",
+      "Amount": 167000,
+    },
+    {
+      "Name": "IBM",
+      "Amount": 1000000,
+    },
+    {
+      "Name": "Innovation Grant",
+      "Amount": 538840,
+    },
+    {
+      "Name": "MITWPU SEED",
+      "Amount": 140000,
+    }
+  ]
