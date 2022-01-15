@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Badge, Box, Image, Stack, Text, Button } from "@chakra-ui/react";
+import { Badge, Box, Image, Stack, Text, Button,SimpleGrid } from "@chakra-ui/react";
 import { WithSubnavigation as PreLogin } from "./Navbar/PreLoginNavbar";
 import { WithSubnavigation as PostLogin } from "./Navbar/Navbar";
 import Logged from "./context";
@@ -12,6 +12,7 @@ const Cards = (props) => {
   return (
     <>
       {user.value ? <PostLogin /> : <PreLogin />}
+      <SimpleGrid minChildWidth={"300px"}  spacing='200px'>
       <Stack
         direction={["column", "row"]}
         spacing="100px"
@@ -28,9 +29,10 @@ const Cards = (props) => {
             overflow={"hidden"}
             rounded={"20px"}
             padding={"1px"}
-            height={"400px"}
+            height={"450px"}
           >
-            <Image src={card.image} />
+            <Image src={card.image} width={"300px"} height={"200px"}/>
+            
             <Box
               padding={"5px"}
               paddingTop={"20px"}
@@ -71,7 +73,7 @@ const Cards = (props) => {
                 fontWeight={"semibold"}
                 textAlign={"center"}
                 paddingTop={"20px"}
-                paddingLeft={"10px"}
+                paddingLeft={"25px"}
                 fontSize={"30px"}
                 textColor={"black"}
                 
@@ -79,7 +81,7 @@ const Cards = (props) => {
                 {card.name}
               </Text>
             </Box>
-            <Text isTruncated padding={"10px"} textColor={"gray"}>
+            <Text isTruncated padding={"10px"} textColor={"gray"} marginLeft={"10px"}>
               {card.summary}
             </Text>
 
@@ -105,6 +107,7 @@ const Cards = (props) => {
               </Button>
             </Link>
           </Box>
+          
         ))}
 
         {/* <Box
@@ -285,6 +288,7 @@ const Cards = (props) => {
           </Button>
         </Box> */}
       </Stack>
+      </SimpleGrid>
       <Footer/>
     </>
   );

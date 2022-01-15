@@ -6,6 +6,7 @@ import { WithSubnavigation as PreLogin } from "./Navbar/PreLoginNavbar";
 import { WithSubnavigation as PostLogin } from "./Navbar/Navbar";
 import Logged from "./context"
 import Footer from "./Footer";
+import Cards from "./Cards";
 
 const Club = (props) => {
   const { clubNo } = useParams();
@@ -65,12 +66,12 @@ const breakpoints = createBreakpoints({
          justify={"center"}
           textShadow={"2xl"}
         >
-          STUDENT ACHIEVEMENTS</Text>
+          STUDENT CLUBS</Text>
      </Box>
 
      
-  <Box w='500px' h='300px' marginTop={"50px"} marginLeft={"600px"} >
-      <Image src={process.env.PUBLIC_URL+'/ihlogo.png'} marginBottom={"20px"} borderRadius={"50%"}  height={"300px"}/>
+  <Box w='500px' h='300px' marginTop={"50px"} marginLeft={"25rem"} >
+      <Image src={currentClubArray[0].image} marginBottom={"20px"} borderRadius={"50%"}  height={"300px"}/>
     
   </Box>
   <Box>
@@ -93,7 +94,7 @@ const breakpoints = createBreakpoints({
     >{currentClubArray[0].name}</Text> 
   </Box>
 
-  <Box marginTop={"0px"} padding={"40px"} textAlign={"center"}>
+  <Box marginTop={"0px"} padding={"40px"} textAlign={"center"} paddingBottom={"0px"}>
       <Text>{currentClubArray[0].summary}
         </Text>
         <Box marginTop={"50px"} color={"whiteAlpha.800"} textShadow={"md"}>
