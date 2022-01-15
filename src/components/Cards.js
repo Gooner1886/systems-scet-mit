@@ -30,7 +30,7 @@ const Cards = (props) => {
             overflow={"hidden"}
             rounded={"20px"}
             padding={"1px"}
-            height={"450px"}
+            height={"400px"}
           >
             <Image src={card.image} />
             <Box
@@ -40,7 +40,7 @@ const Cards = (props) => {
               alignItems={"center"}
               marginLeft={"13px"}
             >
-              <Stack isInline>
+              <Stack isInline marginLeft={"40px"} spacing={"20px"}>
                 <Badge
                   colorScheme={"pink"}
                   variant={"outline"}
@@ -51,6 +51,7 @@ const Cards = (props) => {
                   SCET
                 </Badge>
                 <Badge
+                 
                   colorScheme={"blue"}
                   variant={"outline"}
                   p={1}
@@ -72,8 +73,10 @@ const Cards = (props) => {
                 fontWeight={"semibold"}
                 textAlign={"center"}
                 paddingTop={"20px"}
-                fontSize={"20px"}
+                paddingLeft={"20px"}
+                fontSize={"30px"}
                 textColor={"black"}
+                
               >
                 {card.name}
               </Text>

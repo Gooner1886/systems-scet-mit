@@ -310,7 +310,7 @@ const NAV_ITEMS = [
     children: [
       {
         label: "Curricular",
-        href: "/test",
+        href: "/curr",
       },
       {
         label: "Student Clubs",
