@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import "./About.css";
-import {Box, HStack, Center, Container, Image} from "@chakra-ui/react";
+import {Box, HStack, Center, Image} from "@chakra-ui/react";
 import { Category, ChartComponent, ColumnSeries, DataLabel, Inject, Legend, LineSeries, SeriesCollectionDirective, SeriesDirective, Tooltip } from '@syncfusion/ej2-react-charts';
 
 import { useContext } from "react";
@@ -55,10 +55,10 @@ const Landing = () => {
 
         <Center>
           <Box>
-            <ChartComponent palettes={['#035ff0']} border={ { width: 2, color: '#000000' }} title='Total Citations' subTitle='Citations by type' chartArea={ { background: 'skyblue', width: '90%' }} primaryXAxis={ { valueType: 'Category' }} width={String(window.screen.width / 2)} height={String(window.screen.height / 2)}>
+            <ChartComponent palettes={['#035ff0']} border={ { width: 2, color: '#000000' }} title='Total Citations by type' subTitle='Citations since 2017' chartArea={ { background: 'skyblue', width: '90%' }} primaryXAxis={ { valueType: 'Category' }} width={String(window.screen.width / 2)} height={String(window.screen.height / 2)}>
               <Inject services={[ColumnSeries, Legend, Tooltip, DataLabel, LineSeries, Category]} />
               <SeriesCollectionDirective>
-                <SeriesDirective dataSource={allCitationsData} xName='CitationType' animation={{ enable: true, duration: 1200, delay: 100 }} yName='Citations' type='Column' name='Citations' marker={{dataLabel:{visible:true}}}/>
+                <SeriesDirective dataSource={allCitationsData}  xName='CitationType' animation={{ enable: true, duration: 1200, delay: 100 }} yName='Citations' type='Column' name='Citations' marker={{dataLabel:{visible:true}}}/>
               </SeriesCollectionDirective>
             </ChartComponent>
           </Box>
