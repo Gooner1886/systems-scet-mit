@@ -1,7 +1,7 @@
 import "../Landing/About.css";
 import React from "react";
 import { Category, ChartComponent, ColumnSeries, DataLabel, Inject, Legend, LineSeries, SeriesCollectionDirective, SeriesDirective, Tooltip } from '@syncfusion/ej2-react-charts';
-import {Flex, TabList, Tab, TabPanels, TabPanel, Tabs, VStack, HStack } from "@chakra-ui/react";
+import {Box, Flex, TabList, Tab, TabPanels, TabPanel, Tabs, VStack, HStack } from "@chakra-ui/react";
 import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import {WithSubnavigation as PreLogin} from "../Navbar/PreLoginNavbar";
