@@ -3,9 +3,7 @@ import { Badge, Box, Image, Stack, Text, Button } from "@chakra-ui/react";
 import { WithSubnavigation as PreLogin } from "./Navbar/PreLoginNavbar";
 import { WithSubnavigation as PostLogin } from "./Navbar/Navbar";
 import Logged from "./context";
-import { Link, Route, Routes } from "react-router-dom";
-import Club from "./Club";
-
+import { Link} from "react-router-dom";
 
 
 const Cards = (props) => {

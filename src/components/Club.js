@@ -57,7 +57,7 @@ const breakpoints = createBreakpoints({
   
      >
         <Text
-          fontFamily={"fantasy"}
+          fontFamily={"poppins"}
           fontSize={"xxx-large"}
           textAlign={"center"}
           padding={"20px"}
@@ -74,13 +74,13 @@ const breakpoints = createBreakpoints({
      </Box>
 
      
-  <Box w='500px' h='300px' marginTop={"50px"} marginLeft={"400px"} >
-      <Image src='./ihlogo.png' marginBottom={"20px"} borderRadius={"50%"}  height={"300px"}/>
+  <Box w='500px' h='300px' marginTop={"50px"} marginLeft={"600px"} >
+      <Image src={process.env.PUBLIC_URL+'/ihlogo.png'} marginBottom={"20px"} borderRadius={"50%"}  height={"300px"}/>
     
   </Box>
   <Box>
   <Text
-      fontFamily={"fantasy"}
+      fontFamily={"poppins"}
       fontSize={"xxx-large"}
       textAlign={"center"}
       //padding={"20px"}

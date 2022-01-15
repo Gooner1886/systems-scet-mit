@@ -1,8 +1,7 @@
-import styled from "styled-components";
 import "../Landing/About.css";
 import React from "react";
 import { Category, ChartComponent, ColumnSeries, DataLabel, Inject, Legend, LineSeries, SeriesCollectionDirective, SeriesDirective, Tooltip } from '@syncfusion/ej2-react-charts';
-import {Flex, TabList, Tab, TabPanels, TabPanel, Tabs, VStack, Box, HStack } from "@chakra-ui/react";
+import {Flex, TabList, Tab, TabPanels, TabPanel, Tabs, VStack, HStack } from "@chakra-ui/react";
 import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import {WithSubnavigation as PreLogin} from "../Navbar/PreLoginNavbar";
@@ -17,7 +16,6 @@ const Research = () => {
     const user = useContext(Logged);
     const params = useParams();
 
-    const [defIndex,setDefIndex] = useState(0);
     const [currIndex,setTabIndex] = useState(0);
     
     const handleTabsChange = (index) => {
