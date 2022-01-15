@@ -7,7 +7,7 @@ import PublicationOverview from "./PublicationOverview";
 import { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Logged from "../context"
-
+import Footer from "../Footer"
 
 function AboutPage() {
 
@@ -29,9 +29,7 @@ function AboutPage() {
         <Divider borderColor={"blackAlpha.700"} border={1} background={"black"}></Divider>
         <PublicationOverview />
       </VStack>
-      <Box w='100%' p={4} color='white' overflowX='hidden' textAlign='center' bgColor='rgba(66, 153, 225, 0.6)'>
-            System-SCET@MITWPU
-      </Box>
+      <Footer/> 
       </>
   );
 }
