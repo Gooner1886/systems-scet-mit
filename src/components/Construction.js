@@ -9,7 +9,7 @@ import WithSubnavigation from "./Navbar/Navbar";
 import { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Logged from "./context"
-
+import Footer from "./Footer";
 
 function Construction(props) {
   
@@ -309,18 +309,7 @@ function Construction(props) {
           </Button>
         </Box>
       </Stack>
-      <Box
-        w="100%"
-        p={4}
-        position="fixed"
-        bottom="0"
-        color="white"
-        overflowX="hidden"
-        textAlign="center"
-        bgColor="rgba(66, 153, 225, 0.6)"
-      >
-        System-SCET@MITWPU
-      </Box>
+      <Footer/>
     </>
   );
 }

@@ -4,7 +4,7 @@ import { WithSubnavigation as PreLogin } from "./Navbar/PreLoginNavbar";
 import { WithSubnavigation as PostLogin } from "./Navbar/Navbar";
 import Logged from "./context";
 import { Link} from "react-router-dom";
-
+import Footer from "./Footer";
 
 const Cards = (props) => {
   const user = useContext(Logged);
@@ -71,7 +71,7 @@ const Cards = (props) => {
                 fontWeight={"semibold"}
                 textAlign={"center"}
                 paddingTop={"20px"}
-                paddingLeft={"20px"}
+                paddingLeft={"10px"}
                 fontSize={"30px"}
                 textColor={"black"}
                 
@@ -285,18 +285,7 @@ const Cards = (props) => {
           </Button>
         </Box> */}
       </Stack>
-      <Box
-        w="100%"
-        p={4}
-        position="fixed"
-        bottom="0"
-        color="white"
-        overflowX="hidden"
-        textAlign="center"
-        bgColor="rgba(66, 153, 225, 0.6)"
-      >
-        System-SCET@MITWPU
-      </Box>
+      <Footer/>
     </>
   );
 };

@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { background, Box, Img, Text, Wrap,WrapItem,Center,Stack,Image, Button, transition, transform } from '@chakra-ui/react'
 import { createBreakpoints } from '@chakra-ui/theme-tools'
 import { useParams } from "react-router";
+import { WithSubnavigation as PreLogin } from "./Navbar/PreLoginNavbar";
+import { WithSubnavigation as PostLogin } from "./Navbar/Navbar";
+import Logged from "./context"
+import Footer from "./Footer";
 
 const Club = (props) => {
   const { clubNo } = useParams();
@@ -19,21 +23,12 @@ const breakpoints = createBreakpoints({
   xl: '80em',
   '2xl': '96em',
 })
+  const user = useContext(Logged);
+
   return (
     <>
+      {user.value ? <PostLogin /> : <PreLogin />}
     <Box
-    w="100%"
-    p={4}
-    position={"absolute"}
-    bottom="0"
-    color="white"
-    overflowX="hidden"
-    textAlign="center"
-    bgColor="rgba(66, 153, 225, 0.6)"
-  >
-    System-SCET@MITWPU
-  </Box>
-   <Box
       
       height={"1000px"}
       justifyItems={"center"}
@@ -142,7 +137,7 @@ const breakpoints = createBreakpoints({
   </Box>
    </Box>
         
-   
+   <Footer/>
   </>
   );
 };

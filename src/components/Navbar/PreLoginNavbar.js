@@ -23,11 +23,14 @@ import {
 } from "@chakra-ui/icons";
 
 import { useNavigate} from "react-router-dom";
+import Logged from "../context"
+import { useContext } from "react";
 
 export default function WithSubnavigation() {
   
   const { isOpen, onToggle } = useDisclosure();
   const navigate = useNavigate();
+  const loggedin=useContext(Logged);
 
   return (
     <Box>
@@ -100,12 +103,12 @@ export default function WithSubnavigation() {
             fontFamily={("Zilla Slab", "Poppins")}
             color={"white"}
             bg={"pink.400"}
-            onClick={() => {navigate("/login")}}
+            onClick={() => {if(loggedin.value) localStorage.clear(); navigate("/login")}}
             _hover={{
               bg: "pink.300",
             }}
           >
-            Log In
+            {loggedin.value?"Log Out":"Log In"}
           </Button>
         </Stack>
       </Flex>
