@@ -63,6 +63,7 @@ function App() {
           <Route path="/card" element={<Cards cards={cards}/>} />
           <Route path="/card/:clubNo" element={<Club clubDetails = {cards}/>} />
           <Route path="/club" element={<Club />} />
+          <Route path="/newCitation" element={<newCitation />} />
           <Route path="/researchpublication/:id" element={<Research/>}/>
         </Routes>
       </BrowserRouter>{" "}
