@@ -6,6 +6,7 @@ import Curriculum from "./components/Curriculum/Curriculum"
 import Cards from "./components/Cards";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
+import NewCitation from './components/Citation/newCitation'
 
 import Logged from "./components/context.js";
 import Club from "./components/Club";
@@ -63,7 +64,7 @@ function App() {
           <Route path="/card" element={<Cards cards={cards}/>} />
           <Route path="/card/:clubNo" element={<Club clubDetails = {cards}/>} />
           <Route path="/club" element={<Club />} />
-          <Route path="/newCitation" element={<newCitation />} />
+          <Route path="/newCitation" element={<NewCitation />} />
           <Route path="/researchpublication/:id" element={<Research/>}/>
         </Routes>
       </BrowserRouter>{" "}

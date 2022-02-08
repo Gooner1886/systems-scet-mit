@@ -1,15 +1,32 @@
 import { Category, ChartComponent, AccumulationDataLabel, AccumulationChartComponent, AccumulationSeriesCollectionDirective, AccumulationSeriesDirective, ColumnSeries, DataLabel, Inject, Legend, LineSeries, PieSeries, SeriesCollectionDirective, SeriesDirective, Tooltip } from '@syncfusion/ej2-react-charts';
 import React from "react";
-import {Box, VStack, HStack, Text, Image } from "@chakra-ui/react";
+import {Box, VStack, HStack, Text, Image, Button} from "@chakra-ui/react";
+import {Link} from 'react-router-dom';
 
 
 function PublicationTab() {
     return (
         <VStack spacing={String(window.screen.height / 50)} >
-            <Text width="100%" fontSize={48} fontWeight={"bold"}>Publications</Text>
+            <Text width="100%" style={{textAlign: 'center'}} fontSize={48} fontWeight={"bold"}>Publications</Text>
+            <p style={{fontSize: '1.5em'}}>Add new Citations and update your current research information by clicking on the button below.</p>
+            <Link to='/newCitation'>
+                <Button
+                    display={{ base: "none", md: "inline-flex" }}
+                    fontSize={"sm"}
+                    fontWeight={400}
+                    fontFamily={("Poppins")}
+                    color={"white"}
+                    bg={"pink.400"}
+                    _hover={{
+                        bg: "pink.300",
+                    }}
+                >
+                    Add Citation
+                </Button>
+            </Link>
             <Box borderRadius="lg" shadow="xl" padding="1%">
                 <HStack shouldWrapChildren spacing={String(window.screen.width / 50)} maxWidth={String(window.screen.width * 0.9)} overflowX="scroll" >
-                
+
                 // 2017-2021 journal and conference publications
                 <ChartComponent palettes={['#035ff0',"purple"]} border={ { width: 2, color: '#000000' }} title="Faculty publications" subTitle="Publications since 2017" chartArea={ { background: 'skyblue', width: '90%' }} primaryXAxis={ { valueType: 'Category' }} width={String(window.screen.width / 3)} height={String(window.screen.height / 2)}>
                     <Inject services={[ColumnSeries, Legend, Tooltip, DataLabel, LineSeries, Category]} />
