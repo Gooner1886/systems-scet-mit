@@ -11,6 +11,7 @@ import NewCitation from './components/Citation/newCitation'
 import Logged from "./components/context.js";
 import Club from "./components/Club";
 import Research from "./components/Research/research";
+import ResearchPub from "./components/ResearchPub/Citation/newCitation";
 
 const cards = [
   {
@@ -65,6 +66,7 @@ function App() {
           <Route path="/card/:clubNo" element={<Club clubDetails = {cards}/>} />
           <Route path="/club" element={<Club />} />
           <Route path="/newCitation" element={<NewCitation />} />
+          <Route path="/newProj" element={<ResearchPub/>}/>
           <Route path="/researchpublication/:id" element={<Research/>}/>
         </Routes>
       </BrowserRouter>{" "}

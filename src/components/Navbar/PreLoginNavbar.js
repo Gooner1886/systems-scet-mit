@@ -312,7 +312,7 @@ const NAV_ITEMS = [
     label: "Student Corner",
     children: [
       {
-        label: "Curricular",
+        label: "Circular",
         href: "/curr",
       },
       {

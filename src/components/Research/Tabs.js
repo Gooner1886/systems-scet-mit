@@ -83,10 +83,27 @@ function PublicationTab() {
 function GrantRevenueTab() {
     return (
         <VStack spacing={String(window.screen.height / 50)} >
-            <Text width="100%" fontSize={48}s fontWeight={"bold"}>Grants & Revenue Generation</Text>
+            <Text width="100%" align={"center"} fontSize={48}s fontWeight={"bold"}>Grants & Revenue Generation</Text>
+            <p style={{fontSize: '1.5em'}}>Add new Grants and update your current research information by clicking on the button below.</p>
+            <Link to='/newCitation'>
+                <Button
+                    display={{ base: "none", md: "inline-flex" }}
+                    fontSize={"sm"}
+                    fontWeight={400}
+                    fontFamily={("Poppins")}
+                    color={"white"}
+                    bg={"pink.400"}
+                    _hover={{
+                        bg: "pink.300",
+                    }}
+                >
+                    Add Grants
+                </Button>
+            </Link>
             <Box borderRadius="lg" shadow="xl" padding="1%">
             <HStack shouldWrapChildren spacing={String(window.screen.width / 50)} maxWidth={String(window.screen.width)*0.9} >
                 <ChartComponent palettes={['#035ff0',"purple"]} border={ { width: 2, color: '#000000' }} title="Grants & other revenue generations" subTitle="Grants applied since 2017" chartArea={ { background: 'skyblue', width: '90%' }} primaryXAxis={ { valueType: 'Category' }} width={String(window.screen.width / 2)} height={String(window.screen.height / 2)}>
+                    
                     <Inject services={[ColumnSeries, Legend, Tooltip, DataLabel, LineSeries, Category]} />
                     <SeriesCollectionDirective>
                         <SeriesDirective dataSource={grantData} xName={"GrantType"} yName={"value"} type='Column' name='Grants & other revenue generations' marker={{dataLabel:{visible:true}}} animation={{ enable: true, duration: 1200, delay: 100 }} />
@@ -100,7 +117,23 @@ function GrantRevenueTab() {
 function ResearchProjectTab() {
     return (
         <VStack spacing={String(window.screen.height / 50)} >
-            <Text width="100%" fontSize={48} fontWeight={"bold"}>Research Projects Sanctioned Grants</Text>
+            <Text width="100%" align={"center"} fontSize={48} fontWeight={"bold"}>Research Projects Sanctioned Grants</Text>
+            <p style={{fontSize: '1.5em'}}>Add new research projects and update your current research information by clicking on the button below.</p>
+            <Link to='/newProj'>
+                <Button
+                    display={{ base: "none", md: "inline-flex" }}
+                    fontSize={"sm"}
+                    fontWeight={400}
+                    fontFamily={("Poppins")}
+                    color={"white"}
+                    bg={"pink.400"}
+                    _hover={{
+                        bg: "pink.300",
+                    }}
+                >
+                    Add Projects
+                </Button>
+            </Link>
             <Box borderRadius="lg" shadow="xl" padding="1%">
                 <HStack shouldWrapChildren spacing={String(window.screen.width / 50)} maxWidth={String(window.screen.width)*0.9} overflowX="scroll" >
                     <AccumulationChartComponent enableSmartLabels="true" textRender={thistextRender} >
@@ -123,7 +156,23 @@ function ResearchProjectTab() {
 function PatentsTab() {
     return (
         <VStack spacing={String(window.screen.height / 50)} >
-            <Text width="100%" fontSize={48} fontWeight={"bold"}>Patents</Text>
+            <Text width="100%" fontSize={48} align={"center"} fontWeight={"bold"}>Patents</Text>
+            <p style={{fontSize: '1.5em'}}>Add new patents and update your current research information by clicking on the button below.</p>
+            <Link to='/newCitation'>
+                <Button
+                    display={{ base: "none", md: "inline-flex" }}
+                    fontSize={"sm"}
+                    fontWeight={400}
+                    fontFamily={("Poppins")}
+                    color={"white"}
+                    bg={"pink.400"}
+                    _hover={{
+                        bg: "pink.300",
+                    }}
+                >
+                    Add Patents
+                </Button>
+            </Link>
             <Box borderRadius="lg" shadow="xl" padding="1%">
                 <HStack shouldWrapChildren spacing={String(window.screen.width / 50)} maxWidth={String(window.screen.width)*0.9} overflowX="scroll" >
                     <ChartComponent palettes={['#035ff0',"purple"]} border={ { width: 2, color: '#000000' }} title="Total patents 2017-2021" subTitle="Patents since 2017" chartArea={ { background: 'skyblue', width: '90%' }} primaryXAxis={ { valueType: 'Category' }} width={String(window.screen.width / 2)} height={String(window.screen.height / 2)}>

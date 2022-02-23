@@ -7,32 +7,23 @@ import Footer from "../Footer";
 
 const cards = [
     {
-      name: "First Year",
+      name: "All Circulars",
       image: "https://images.collegedunia.com/public/college_data/images/appImage/1518500807mitbuilding6.jpg?mode=stretch",
       summary:
-        "Our comprehensive first year curriculum has a variety of subjects that lay the foundations needed for the upcoming specific 3-year CSE course of the program.",
-      link:"https://drive.google.com/file/d/1XeQkWHlhuLbeScVpVl_sggYCZGZWkovp/view?usp=sharing"
+        "View all the circulars till date",
+      link:"https://drive.google.com/drive/folders/1Jbfyz4Tcnx0gncDRDfChOdxKm1H-Z6zW?usp=sharing"
     },
     {
-      name: "Second Year",
+      name: "2021",
       image: "https://images.collegedunia.com/public/college_data/images/appImage/1518500807mitbuilding6.jpg?mode=stretch",
-      summary:
-        "The Second Year curriculum provides subject-wise beginnings and basics of programming languages through subjects like OOPs, DS and more hard-ware based coding .",
-      link:"https://drive.google.com/file/d/1NZBCqMtxIfebPYTAH3r8o_CgvzdvisVY/view?usp=sharing"
+      summary:"View circulars and notices for the year 2021",
+      link:"https://drive.google.com/drive/folders/18Gg2WX39ncsfL2jfpP60LY9d-5iRqepj?usp=sharing"
     },
     {
-      name: "Third Year",
+      name: "2022",
       image: "https://images.collegedunia.com/public/college_data/images/appImage/1518500807mitbuilding6.jpg?mode=stretch",
-      summary:
-        "The 3rd Year of our CSE program includes core computer science subjects that enables our aspiring engineers to explore their specific fields of interest.",
-      link:"https://drive.google.com/file/d/1htpPCqTaUBTbWcNKbQcvqZFBMd8fOQHI/view?usp=sharing"
-    },
-    {
-      name: "Fourth Year",
-      image: "https://images.collegedunia.com/public/college_data/images/appImage/1518500807mitbuilding6.jpg?mode=stretch",
-      summary:
-        "The Final Year of our 4-year program marks the end of the complete rounding of  our market-ready skilled engineers with their final projects and electives.",
-      link:"https://drive.google.com/file/d/1HEr0TV2cBD1iQAhoM1buxvXRbBD9RMRg/view?usp=sharing"
+      summary:"View circulars and notices for the year 2022",
+      link:"https://drive.google.com/drive/folders/18KZt-OM1bmdq4YmBjX90xRSYO7JSCpw3?usp=sharing"
     }
 ];
 
@@ -60,7 +51,7 @@ function Curriculum(){
           overflow={"hidden"}
           rounded={"20px"}
           padding={"1px"}
-          height={"400px"}
+          height={"300px"}
         >
           <Image src={card.image} />
           <Box
