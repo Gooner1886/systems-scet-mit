@@ -22,15 +22,14 @@ import {
   ChevronRightIcon,
 } from "@chakra-ui/icons";
 
-import { useNavigate} from "react-router-dom";
-import Logged from "../context"
+import { useNavigate } from "react-router-dom";
+import Logged from "../context";
 import { useContext } from "react";
 
 export default function WithSubnavigation() {
-  
   const { isOpen, onToggle } = useDisclosure();
   const navigate = useNavigate();
-  const loggedin=useContext(Logged);
+  const loggedin = useContext(Logged);
 
   return (
     <Box>
@@ -60,16 +59,18 @@ export default function WithSubnavigation() {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
-            <Button
-              textAlign={useBreakpointValue({ base: "center", md: "left" })}
-              fontFamily={("Zilla Slab", "Poppins")}
-              fontSize={"xl"}
-              colorScheme='transparent'
-              textColor={'gray.800'}
-              onClick={() => {navigate("/")}}
-            >
-              Home
-            </Button>
+          <Button
+            textAlign={useBreakpointValue({ base: "center", md: "left" })}
+            fontFamily={("Zilla Slab", "Poppins")}
+            fontSize={"xl"}
+            colorScheme="transparent"
+            textColor={"gray.800"}
+            onClick={() => {
+              navigate("/");
+            }}
+          >
+            Home
+          </Button>
 
           <Flex
             display={{ base: "none", md: "flex" }}
@@ -103,12 +104,15 @@ export default function WithSubnavigation() {
             fontFamily={("Zilla Slab", "Poppins")}
             color={"white"}
             bg={"pink.400"}
-            onClick={() => {if(loggedin.value) localStorage.clear(); navigate("/login")}}
+            onClick={() => {
+              if (loggedin.value) localStorage.clear();
+              navigate("/login");
+            }}
             _hover={{
               bg: "pink.300",
             }}
           >
-            {loggedin.value?"Log Out":"Log In"}
+            {loggedin.value ? "Log Out" : "Log In"}
           </Button>
         </Stack>
       </Flex>
@@ -134,7 +138,9 @@ const DesktopNav = () => {
             <PopoverTrigger>
               <Link
                 p={2}
-                onClick={() => {navigate(navItem.href)}}
+                onClick={() => {
+                  navigate(navItem.href);
+                }}
                 fontSize={"md"}
                 fontWeight={375}
                 fontFamily={("Zilla Slab", "Poppins")}
@@ -176,7 +182,9 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
 
   return (
     <Link
-      onClick={() => {navigate(href)}}
+      onClick={() => {
+        navigate(href);
+      }}
       role={"group"}
       display={"block"}
       p={2}
@@ -288,7 +296,7 @@ const NAV_ITEMS = [
   {
     label: "Research & Innovations",
     href: "/researchpublication/0",
-  
+
     children: [
       {
         label: "Publications",
@@ -307,7 +315,7 @@ const NAV_ITEMS = [
         href: "/researchpublication/3",
       },
     ],
-  },  
+  },
   {
     label: "Student Corner",
     children: [
@@ -319,7 +327,15 @@ const NAV_ITEMS = [
         label: "Student Clubs",
         href: "/card",
       },
+      {
+        label: "B.Tech Capstone Template",
+        href: "/capstoneTemplate",
+      },
+      {
+        label: "Timetables",
+        href: "/timetables",
+      },
     ],
   },
 ];
-export {WithSubnavigation};
+export { WithSubnavigation };

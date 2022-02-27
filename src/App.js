@@ -15,6 +15,8 @@ import ResearchPub from "./components/ResearchPub/Citation/newCitation";
 import NewJournalPub from "./components/JournalPub/journalPub";
 import NewConferencePub from "./components/ConferencePub/conferencePub";
 import NewBooksPub from "./components/BooksPub/booksPub";
+import TimeTables from "./components/Timetables/timetables";
+import CapstoneTemplate from "./components/CapstoneTemplate/capstoneTemplate";
 
 const cards = [
   {
@@ -69,6 +71,8 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/test" element={<Construction />} />
           <Route path="/curr" element={<Curriculum />} />
+          <Route path="/timetables" element={<TimeTables />} />
+          <Route path="/capstoneTemplate" element={<CapstoneTemplate />} />
           <Route path="/card" element={<Cards cards={cards} />} />
           <Route path="/card/:clubNo" element={<Club clubDetails={cards} />} />
           <Route path="/club" element={<Club />} />
