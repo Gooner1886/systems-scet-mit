@@ -31,8 +31,8 @@ function PublicationTab() {
         Publications
       </Text>
       <p style={{ fontSize: "1.5em" }}>
-        Add new Citations and update your current research information by
-        clicking on the button below.
+        Add new information about your on-going research by clicking the
+        respective buttons below.
       </p>
       <HStack spacing="24px">
         <Link to="/newCitation">

@@ -320,7 +320,7 @@ const NAV_ITEMS = [
     label: "Student Corner",
     children: [
       {
-        label: "Circular",
+        label: "Circulars",
         href: "/curr",
       },
       {
@@ -328,7 +328,7 @@ const NAV_ITEMS = [
         href: "/card",
       },
       {
-        label: "B.Tech Capstone Template",
+        label: "B.Tech Capstone Templates",
         href: "/capstoneTemplate",
       },
       {
