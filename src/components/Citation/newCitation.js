@@ -15,7 +15,7 @@ const NewCitation = (props) => {
             <div className="recruitment__page">
                 <div className="recruitment__info__div">
                     <p className="recruitment__info__header">
-                        Add new Citations
+                        Add new Publication & Citations Record
                     </p>
                     <p className="recruitment__info">
                         Add and update your new Citations or Research information if any to the form below.
@@ -24,7 +24,7 @@ const NewCitation = (props) => {
                 <div className="recruitment__form__div">
                     <iframe
                         title='RecruitmentForm'
-                        src="https://docs.google.com/forms/d/e/1FAIpQLSfKJUrE1U4IFTdwQWRtntq9KLJbMi3-EQtUfdA0n0_bJAgPOg/viewform?embedded=true"
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSclGMNtDfSQwSK44XBmfccedITR3Xy-em3_mHzJbk75JQ22bw/viewform?embedded=true"
                         width="50%"
                         height="100%"
                         frameborder="0"
