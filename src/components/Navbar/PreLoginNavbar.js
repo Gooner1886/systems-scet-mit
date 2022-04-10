@@ -103,7 +103,7 @@ export default function WithSubnavigation() {
             fontWeight={400}
             fontFamily={("Zilla Slab", "Poppins")}
             color={"white"}
-            bg={"pink.400"}
+            bg={'#cd354d'}
             onClick={() => {
               if (loggedin.value) localStorage.clear();
               navigate("/login");

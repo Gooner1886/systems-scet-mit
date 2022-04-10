@@ -42,59 +42,15 @@ function PublicationTab() {
             fontWeight={400}
             fontFamily={"Poppins"}
             color={"white"}
-            bg={"pink.400"}
+            bg={"#cd354d"}
             _hover={{
               bg: "pink.300",
             }}
           >
-            Add NIRF 2B Citations
+            Add Publication Info
           </Button>
         </Link>
-        <Link to="/newJournalPub">
-          <Button
-            display={{ base: "none", md: "inline-flex" }}
-            fontSize={"sm"}
-            fontWeight={400}
-            fontFamily={"Poppins"}
-            color={"white"}
-            bg={"pink.400"}
-            _hover={{
-              bg: "pink.300",
-            }}
-          >
-            Add NIRF 2A Journal Publication
-          </Button>
-        </Link>
-        <Link to="/newConferencePub">
-          <Button
-            display={{ base: "none", md: "inline-flex" }}
-            fontSize={"sm"}
-            fontWeight={400}
-            fontFamily={"Poppins"}
-            color={"white"}
-            bg={"pink.400"}
-            _hover={{
-              bg: "pink.300",
-            }}
-          >
-            Add NIRF 2A Conference Publication
-          </Button>
-        </Link>
-        <Link to="/newBooksPub">
-          <Button
-            display={{ base: "none", md: "inline-flex" }}
-            fontSize={"sm"}
-            fontWeight={400}
-            fontFamily={"Poppins"}
-            color={"white"}
-            bg={"pink.400"}
-            _hover={{
-              bg: "pink.300",
-            }}
-          >
-            Add NIRF 2A Book Chapters
-          </Button>
-        </Link>
+
       </HStack>
       <Box borderRadius="lg" shadow="xl" padding="1%">
         <HStack
@@ -352,7 +308,7 @@ function GrantRevenueTab() {
           fontWeight={400}
           fontFamily={"Poppins"}
           color={"white"}
-          bg={"pink.400"}
+          bg={"#cd354d"}
           _hover={{
             bg: "pink.300",
           }}
@@ -420,7 +376,7 @@ function ResearchProjectTab() {
           fontWeight={400}
           fontFamily={"Poppins"}
           color={"white"}
-          bg={"pink.400"}
+          bg={"#cd354d"}
           _hover={{
             bg: "pink.300",
           }}
@@ -488,7 +444,7 @@ function PatentsTab() {
           fontWeight={400}
           fontFamily={"Poppins"}
           color={"white"}
-          bg={"pink.400"}
+          bg={"#cd354d"}
           _hover={{
             bg: "pink.300",
           }}

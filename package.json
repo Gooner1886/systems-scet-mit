@@ -2,7 +2,7 @@
   "name": "systems-scet",
   "version": "0.1.0",
   "private": true,
-  "homepage" : "https://gooner1886.github.io",
+  "homepage": "https://gooner1886.github.io",
   "dependencies": {
     "@chakra-ui/icons": "^1.1.1",
     "@chakra-ui/react": "^1.7.4",
@@ -14,6 +14,7 @@
     "axios": "^0.24.0",
     "framer-motion": "^5.5.6",
     "mapbox-gl": "^2.6.1",
+    "netlify-cli": "^8.19.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",

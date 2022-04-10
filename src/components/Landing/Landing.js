@@ -22,11 +22,11 @@ const Landing = () => {
       <div style={{backgroundImage:`url(${process.env.PUBLIC_URL + "/bg1.png"})`,backgroundSize:"contain", backgroundPositionX:"center" ,backgroundRepeat:"no-repeat", width: window.screen.width*0.957}}>
         <Box height={String(window.screen.height / 20)} />
         <Center>
-          <Image src={process.env.PUBLIC_URL + "/logo512.png"} style={{width:window.screen.width / 7.5}} borderRadius="50%" />
+          <Image src={process.env.PUBLIC_URL + "/logo512.png"} style={{width:window.screen.width / 15}} borderRadius="50%" />
         </Center>
         <HeaderCard>
         {/* <h1 style={{ margin: 0, color: "white", fontWeight:'bold' }}>MIT-WPU</h1> */}
-          <h1 style={{ margin: 0, marginBottom: 20, fontSize: 60, color: 'white', fontWeight:'bold' }}> School of Computer Engineering & Technology </h1>
+          <h1 style={{ margin: 0, marginBottom: 20, fontSize: 60, color: 'white', fontWeight:'bold' }}> School of Computer Engineering <br/> & Technology </h1>
           <TextBox style={{color:"white"}}>
             <p></p>
           </TextBox>
@@ -53,6 +53,28 @@ const Landing = () => {
           <div className="row2-container"> {/* <div className="box red">*/} {/* <h2>Mission</h2>*/} {/* <p>Encouraging and developing students’ ideas & projects in order to commercialise them</p>*/} {/* <img src="https://assets.codepen.io/2301174/icon-team-builder.svg" alt="" />*/} {/* </div>*/} </div>
         </InfoBox>
 
+
+        <QuoteBox>
+          <h1 style={{ textAlign: 'center'}}>Meet the Dean / HoS</h1>
+          <Quotes>
+            <Blockquote>
+              <p>It gives me immense pleasure to welcome you to Dr. Vishwanath Karad MIT World Peace University. At the faculty of
+                science, the Curriculum is a unique blend of science and spirituality and hence our schools provide exceptional graduate
+                and undergraduate education</p>
+              <Cite>Dr. Shubhalaxmi Joshi <br/> Associate Dean, Faculty of Science</Cite>
+              <AuthImg1 />
+            </Blockquote>
+            <Blockquote>
+              <p>We are proud of our strong academic foundation which blends theoretical and practical knowledge to match the requirements
+                and demands of the industry. We are committed to students by offering academic programs that foster critical
+                and analytical thinking.</p>
+              <Cite>Dr. Chandrashekhar Patil <br/> Head of School & Professor</Cite>
+              <AuthImg />
+            </Blockquote>
+          </Quotes>
+        </QuoteBox>
+
+        <h1 style={{ textAlign: 'center', fontSize: '3em', marginBottom: '20px'}}>Research & Publications</h1>
         <Center>
           <Box>
             <ChartComponent palettes={['#035ff0']} border={ { width: 2, color: '#000000' }} title='Total Citations by type' subTitle='Citations since 2017' chartArea={ { background: 'skyblue', width: '90%' }} primaryXAxis={ { valueType: 'Category' }} width={String(window.screen.width / 2)} height={String(window.screen.height / 2)}>
@@ -64,7 +86,6 @@ const Landing = () => {
           </Box>
 
         </Center>
-
 
         <Box p='50' >
 
@@ -102,9 +123,7 @@ const Landing = () => {
             </HStack>
           </Center>
         </Box>
-
       </div>
-
     </Parent>
     <Footer />
 
@@ -159,6 +178,113 @@ const TextBox = styled.div`
 const InfoBox = styled.div`
   margin: 5px auto;
 `;
+
+const QuoteBox = styled.div`
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 250px;
+  margin-bottom: 30px;
+  
+  h1 {
+    font-size: 3em;
+  }
+`;
+
+const Quotes = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Blockquote = styled.div`
+  position: relative;
+  margin: 40px 0;
+  padding: 1.6em 2.4em .7em calc(1.4em + 140px);
+  font: italic 1.2rem var(--type-quote);
+  background:hsl(0 0% 97%) / 140px;
+  border-radius: 7px;
+  border: 2px solid white;
+  box-shadow: 2px 2px 4px hsl(0 0% 0% / 20%);
+  text-indent: 1.6em;
+  width: 60%;
+  margin-right: 20px;
+  
+  &::before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 7px;
+    box-shadow: inset -2px -2px 1px hsl(0 0% 100%),
+    inset 2px 2px 4px hsl(0 0% 0% / 20%);
+  }
+  
+  &::after {
+    content: "❝";
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: -2px;
+    transform: translate(-50%, -50%);
+    width: 1.3em;
+    height: 1.3em;
+    background: white;
+    box-shadow: 0 4px 5px -1px hsla(0 0% 0% / 20%);
+    border-radius: 999px;
+    display: grid;
+    place-content: center;
+    padding-top: .5em;
+    color: #cd354d;
+    font-size: 36px;
+    font-style: normal;
+    text-indent: 0;
+  }
+`;
+
+const Cite = styled.div`
+  display: block;
+  margin-top: 30px;
+  text-indent: 0;
+  text-align: center;
+  font: bold .9rem var(--type-body);
+  text-transform: uppercase;
+  color: hsl(0 0% 20%);
+`;
+
+const AuthImg = styled.div`
+  position: absolute;  left: 0;
+  top: 0;
+  width: 140px;
+  height: 100%;
+  opacity: 0.75;
+  background: url("https://computer-science.mitwpu.edu.in/images/school-of-computer-science/Dr_C_H_Patil.jpg") no-repeat center;
+  background-size: cover;
+  background-blend-mode: hard-light;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+`;
+
+const AuthImg1 = styled.div`
+  position: absolute;  left: 0;
+  top: 0;
+  width: 140px;
+  height: 100%;
+  opacity: 0.75;
+  background: url("https://computer-science.mitwpu.edu.in/images/school-of-computer-science/Dr-Shubhalaxmi-Joshi.jpg") no-repeat center;
+  background-size: cover;
+  background-blend-mode: hard-light;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+`;
+
 
 const allCitationsData = [
   {
